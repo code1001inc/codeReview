@@ -1,0 +1,3 @@
+﻿개체-관계 모델 - https://ko.wikipedia.org/wiki/%EA%B0%9C%EC%B2%B4-%EA%B4%80%EA%B3%84_%EB%AA%A8%EB%8D%B8
+
+ERD 크로우핏 표기법 - https://codedragon.tistory.com/4187
