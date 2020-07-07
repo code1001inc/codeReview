@@ -1,0 +1,2295 @@
+<script type="text/javascript" src="../html/C_AddTimeWrkByFindPrint.js?version={{version}}&CUSTCD={{CUSTCD}}"></script>
+<link rel="stylesheet" type="text/css" href="../css/styleLoginsmis.css"/>
+<!--[if lte IE 7]>
+        <link rel="stylesheet" type="text/css" href="../css/styleLoginsmis_ie.css" media="screen" />      
+<![endif]-->
+<style>
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+.pdataList2 {
+	border-collapse:collapse;
+	table-layout:fixed;
+	width:100%;
+}
+.pdataList2 th {
+	margin: 0;
+	padding: 0px;
+	border-bottom: 1px solid #000;
+	border-right: 1px solid #000;
+	height:18px;
+	font-size:12px;
+	text-align: center;
+	background-color:#999;
+	font-weight:normal;
+}
+.pdataList2 td {
+	margin: 0;
+	padding: 0px;
+	font-size:15px;
+	height:20px;
+	border: 1px solid #eee;
+	padding:0px;
+	white-space:nowrap;
+	font-family: 'Nanum Gothic', serif;
+}
+.pdataList3 {
+	border-collapse:collapse;
+	table-layout:fixed;
+	width:100%;
+}
+.pdataList3 th {
+	margin: 0;
+	padding: 0px;
+	border-bottom: 1px solid #000;
+	border-right: 1px solid #000;
+	height:18px;
+	font-size:12px;
+	text-align: center;
+	background-color:#999;
+	font-weight:normal;
+}
+.pdataList3 td {
+	margin: 0;
+	padding: 0px;
+	font-size:16px;
+	height:25px;
+	border: 1px solid #000;
+	padding:2px;
+	white-space:nowrap;
+	font-family: 'Nanum Gothic', serif;
+}
+.pdataList4 {
+	border-collapse:collapse;
+	table-layout:fixed;
+	width:100%;
+}
+.pdataList4 th {
+	margin: 0;
+	padding: 0px;
+	border-bottom: 1px solid #000;
+	border-right: 1px solid #000;
+	height:18px;
+	font-size:12px;
+	text-align: center;
+	background-color:#999;
+	font-weight:normal;
+}
+.pdataList4 td {
+	margin: 0;
+	padding: 0px;
+	font-size:16px;
+	height:24px;
+	border: 1px solid #000;
+	padding:2px;
+	white-space:nowrap;
+	font-family: 'Nanum Gothic', serif;
+}
+.pdataList5 {
+	border-collapse:collapse;
+	table-layout:fixed;
+	width:100%;
+}
+.pdataList5 th {
+	margin: 0;
+	padding: 0px;
+	border-bottom: 1px solid #000;
+	border-right: 1px solid #000;
+	height:18px;
+	font-size:12px;
+	text-align: center;
+	background-color:#999;
+	font-weight:normal;
+}
+.pdataList5 td {
+	margin: 0;
+	padding: 0px;
+	font-size:16px;
+	height:23px;
+	border: 1px solid #000;
+	padding:2px;
+	white-space:nowrap;
+	font-family: 'Nanum Gothic', serif;
+}
+.pdataList6 {
+	border-collapse:collapse;
+	table-layout:fixed;
+	width:100%;
+}
+.pdataList6 th {
+	margin: 0;
+	padding: 0px;
+	border-bottom: 1px solid #000;
+	border-right: 1px solid #000;
+	height:18px;
+	font-size:12px;
+	text-align: center;
+	background-color:#999;
+	font-weight:normal;
+}
+.pdataList6 td {
+	margin: 0;
+	padding: 0px;
+	font-size:16px;
+	height:24px;
+	border: 1px solid #000;
+	padding:2px;
+	white-space:nowrap;
+	font-family: 'Nanum Gothic', serif;
+}
+.pdataList7 {
+	border-collapse:collapse;
+	table-layout:fixed;
+	width:100%;
+}
+.pdataList7 th {
+	margin: 0;
+	padding: 0px;
+	border-bottom: 1px solid #000;
+	border-right: 1px solid #000;
+	height:18px;
+	font-size:12px;
+	text-align: center;
+	background-color:#999;
+	font-weight:normal;
+}
+.pdataList7 td {
+	margin: 0;
+	padding: 0px;
+	font-size:16px;
+	height:35px;
+	border: 1px solid #000;
+	padding:2px;
+	white-space:nowrap;
+	font-family: 'Nanum Gothic', serif;
+}
+.pdataList8 {
+	border-collapse:collapse;
+	table-layout:fixed;
+	width:100%;
+}
+.pdataList8 th {
+	margin: 0;
+	padding: 0px;
+	border-bottom: 1px solid #000;
+	border-right: 1px solid #000;
+	height:18px;
+	font-size:12px;
+	text-align: center;
+	background-color:#999;
+	font-weight:normal;
+}
+.pdataList8 td {
+	margin: 0;
+	padding: 0px;
+	font-size:14px;
+	height:26px;
+	border: 0px solid #000;
+	padding:2px;
+	white-space:nowrap;
+	font-family: 'Nanum Gothic', serif;
+	letter-spacing:2px;
+	line-height:165%
+}
+.fontsize11 {
+	font-size:11px;
+}
+</style>
+<!-- IF 'PrintListNo' -->
+<div style="width:100%; padding:10px; text-align:center;"> 자료가 없습니다.</div>
+<!-- IF 'PrintListNo' -->
+<!-- IF 'PrintList' -->
+<!--원천영수증 1 PAGE START-->
+<div class="wrapper" style="margin:0px auto;width:1000px;height:1450px; border:0px dotted #000;position:relative;" >
+<input id="CUSTCD" type="hidden" value="{{CUSTCD}}">
+  <!--헤드 START-->
+  <div style="position:absolute; left:11px; top:3px; width:521px; text-align:left; vertical-align:bottom; height:20px; line-height:20px; font-size:16px;">■ 소득세법 시행규칙 [별지 제24호 서식(1)] &lt;개정 2018.10. 9.&gt;</div>
+  <div style="position:absolute; left:930px; top:21px; width:70px; text-align:left; vertical-align:bottom; height:20px; line-height:20px; font-size:14px;text-align:right;">(제1쪽)</div>
+  <div style="width:998px; height: 175px; font-size:24px; border:2px solid black; position:absolute; top:43px; left:0px;">
+    <table style="position:absolute; top:41px; left:8px; height:56px; width: 138px;"  class="pdataList2" >
+      <colgroup>
+      <col width="69px"/>
+      <col width="69px"/>
+      </colgroup>
+      <tbody>
+        <tr>
+          <td align="center" style="line-height:18px;">관리<br />
+            번호</td>
+          <td >&nbsp;</td>
+        </tr>
+      </tbody>
+    </table>
+    <div style="position:absolute; top:18px; left:195px; width: 430px; font-size:24px; font-weight:bold; font-family: 'Nanum Gothic', serif; letter-spacing:3px;">[&nbsp;&nbsp;]근로소득  원천징수영수증</div>
+    <div style="position:absolute; top:55px; left:195px; width: 430px; font-size:24px; font-weight:bold; font-family: 'Nanum Gothic', serif; letter-spacing:3px;">[&nbsp;&nbsp;]근로소득  지 급 명 세 서</div>
+    <div style="position:absolute; top:85px; left:195px; width: 527px; font-size:15px; font-weight:bold; font-family: 'Nanum Gothic', serif; letter-spacing:3px;">([&nbsp;&nbsp;]소득자 보관용  [&nbsp;&nbsp;]발행자 보관용  [&nbsp;&nbsp;]발행자 보고용)</div>
+    <table class="pdataList2" style="position:absolute; top:3px; left:736px; height:170px; width: 256px;">
+      <colgroup>
+      <col width="60px"/>
+      <col width="40px"/>
+      <col width="50px"/>
+      <col width="50px"/>
+      <col width="50px"/>
+      </colgroup>
+      <tbody>
+        <tr>
+          <td colspan="2" align="center">거주구분</td>
+          <td colspan="3" align="center">거주자1 / 비거주자2</td>
+        </tr>
+        <tr>
+          <td align="center">거주지국</td>
+          <td ></td>
+          <td  colspan="2"align="center">거주지국코드</td>
+          <td ></td>
+        </tr>
+        <tr>
+          <td colspan="2" align="center">내·외국인</td>
+          <td colspan="3" align="center">내국인1 / 외국인2</td>
+        </tr>
+        <tr>
+          <td colspan="3" align="center">외국인단일세율적용</td>
+          <td colspan="2" align="center">여1 / 부2</td>
+        </tr>
+        <tr>
+          <td align="center">국적</td>
+          <td ></td>
+          <td  colspan="2" align="center">국적코드</td>
+          <td ></td>
+        </tr>
+        <tr>
+          <td colspan="2" align="center">세대주여부</td>
+          <td colspan="3" align="center">세대주1, 세대원2</td>
+        </tr>
+        <tr>
+          <td colspan="2" align="center">연말정산구분</td>
+          <td colspan="3" align="center">계속근로1,중도퇴사2</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <!--헤드 END-->
+  <!--기본정보 START-->
+  <div style="width:100%; border:1px solid black; position:absolute; top:220px; left:0px;">
+    <table class="pdataList3"  >
+      <colgroup>
+      <col width="80px"/>
+      <col width="240px"/>
+      <col width="250px"/>
+      <col width="180px"/>
+      <col width="248px"/>
+      </colgroup>
+      <tbody>
+        <tr>
+          <td rowspan="3" align="center" style="line-height:30px;">징수<br />
+            의무자</td>
+          <td >&#9312; 법인명(상호)</td>
+          <td >{{SANGHO}}</td>
+          <td >&#9313; 대표자(성명)</td>
+          <td >{{BOSSNM}}</td>
+        </tr>
+        <tr>
+          <td >&#9314; 사업자등록번호</td>
+          <td >{{SAUPJA}}</td>
+          <td >&#9315; 주민등록번호</td>
+          <td >{{CUSTNO}}</td>
+        </tr>
+        <tr>
+          <td >&#9316; 소재지(주소)</td>
+          <td colspan="3" >{{CSTADR}}</td>
+        </tr>
+        <tr>
+          <td rowspan="2" align="center">소득자</td>
+          <td >&#9317; 성명</td>
+          <td >{{USERNM}}</td>
+          <td >&#9318; 주민등록번호</td>
+          <td >{{JUMIN1}}-{{JUMIN}}</td>
+          <!--주민번호 13자리 필요시-->
+          <!--td >{{JUMINO1}}</td-->
+        </tr>
+        <tr>
+          <td >&#9319; 주소</td>
+          <td colspan="3" >{{MANADR}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <!--기본정보 END-->
+  <!--근무철별소득명세 START-->
+  <div style="width:100%; border:1px solid black; position:absolute; top:371px; left:0px;">
+    <table class="pdataList3">
+      <colgroup>
+      <col width="40px"/>
+      <col width="280px"/>
+      <col width="130px"/>
+      <col width="130px"/>
+      <col width="130px"/>
+      <col width="130px"/>
+      <col width="158px"/>
+      </colgroup>
+      <tbody>
+        <tr>
+          <td rowspan="13" align="center" style="font-weight:bold;line-height:20px;">I<br />
+            근<br />
+            무<br />
+            처<br />
+            별<br />
+            소<br />
+            득<br />
+            명<br />
+            세<br /></td>
+          <td align="center">구분</td>
+          <td align="center">주(현)</td>
+          <td align="center">종(전)</td>
+          <td align="center">종(전)</td>
+          <td align="center">&#9327; -1납세조합</td>
+          <td align="center">합계</td>
+        </tr>
+        <tr>
+          <td >&#9320; 근 무 처 명</td>
+          <td  style="font-size:100%">{{SANGHO}}</td>
+          <td  style="font-size:100%">{{COMNAM1}}</td>
+          <td >{{COMNAM2}}</td>
+          <td ></td>
+          <td ></td>
+        </tr>
+        <tr>
+          <td >&#9321; 사업자등록번호</td>
+          <td >{{SAUPJA}}</td>
+          <td >{{SAUPJA1}}</td>
+          <td >{{SAUPJA2}}</td>
+          <td ></td>
+          <td ></td>
+        </tr>
+        <tr>
+          <td >&#9322; 근무기간</td>
+          <td  style="font-size:90%">{{WRKDAT}}</td>
+          <td align="center" style="font-size:100%">{{STRDAT1}}~{{ENDDAT1}}</td>
+          <td align="center" style="font-size:100%">{{STRDAT2}}~{{ENDDAT2}}</td>
+          <td ></td>
+          <td ></td>
+        </tr>
+        <tr>
+          <td >&#9323; 감면기간</td>
+          <td  style="font-size:90%">{{GAMDAT}}</td>
+          <td align="center" style="font-size:100%">{{GAMSTR1}}~{{GAMEND1}}</td>
+          <td align="center" style="font-size:100%">{{GAMSTR2}}~{{GAMEND2}}</td>
+          <td ></td>
+          <td ></td>
+        </tr>
+        <tr>
+          <td >&#9324; 급   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 여</td>
+          <td align="right">{{PAYAMT}}</td>
+          <td align="right">{{PAYAMT1}}</td>
+          <td align="right">{{PAYAMT2}}</td>
+          <td align="right"></td>
+          <td align="right">{{PAYSUM}}</td>
+        </tr>
+        <tr>
+          <td >&#9325; 상     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 여</td>
+          <td align="right">{{BNSAMT}}</td>
+          <td align="right">{{BNSAMT1}}</td>
+          <td align="right">{{BNSAMT2}}</td>
+          <td align="right"></td>
+          <td align="right">{{BNSSUM}}</td>
+        </tr>
+        <tr>
+          <td >&#9326; 인 정 상 여</td>
+          <td align="right">{{INSBNS}}</td>
+          <td align="right">{{INSAMT1}}</td>
+          <td align="right">{{INSAMT2}}</td>
+          <td align="right"></td>
+          <td align="right">{{INJSUM}}</td>
+        </tr>
+        <tr>
+          <td >&#9326; -1주식매수선택권 행사이익</td>
+          <td align="right"></td>
+          <td align="right"></td>
+          <td align="right"></td>
+          <td align="right"></td>
+          <td align="right"></td>
+        </tr>
+        <tr>
+          <td >&#9326; -2우리사주조합인출금</td>
+          <td align="right"></td>
+          <td align="right"></td>
+          <td align="right"></td>
+          <td align="right"></td>
+          <td align="right"></td>
+        </tr>
+        <tr>
+          <td >&#9326; -3임원퇴직소득금액한도초과</td>
+          <td align="right">{{RETAMT}}</td>
+          <td align="right">{{IMWAMT1}}</td>
+          <td align="right">{{IMWAMT2}}</td>
+          <td align="right"></td>
+          <td align="right">{{IMWSUM}}</td>
+        </tr>
+        <tr>
+          <td >&#9326; -4</td>
+          <td align="right"></td>
+          <td align="right"></td>
+          <td align="right"></td>
+          <td align="right"></td>
+          <td align="right"></td>
+        </tr>
+        <tr>
+          <td >&#9326;     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 계</td>
+          <td align="right">{{SUMAMT}}</td>
+          <td align="right">{{SUMAMT1}}</td>
+          <td align="right">{{SUMAMT2}}</td>
+          <td align="right"></td>
+          <td align="right">{{AMTSUM}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <!--근무철별소득명세 END-->
+  <!--비과세및감면소득명세 START-->
+  <div style="width:100%; border:1px solid black; position:absolute; top:762px; left:0px;">
+    <table class="pdataList3">
+      <colgroup>
+      <col width="40px"/>
+      <col width="200px"/>
+      <col width="80px"/>
+      <col width="130px"/>
+      <col width="130px"/>
+      <col width="130px"/>
+      <col width="130px"/>
+      <col width="158px"/>
+      </colgroup>
+      <tbody>
+        <tr>
+          <td rowspan="11" align="center" style="font-weight:bold;line-height:20px;">II<br />
+            비<br />
+            과<br />
+            세<br />
+            및<br />
+            감<br />
+            면<br />
+            소<br />
+            득<br />
+            명<br />
+            세</td>
+          <td >&#9329; 국외근로</td>
+          <td align="center">M0X</td>
+          <td align="right">{{M0XAMT}}</td>
+          <td align="right">{{M0XAMT1}}</td>
+          <td align="right">{{M0XAMT2}}</td>
+          <td align="right"></td>
+          <td align="right">{{M0XSUM}}</td>
+        </tr>
+        <tr>
+          <td >&#9329; -1야간근로수당</td>
+          <td align="center">O0X</td>
+          <td align="right">{{O0XAMT}}</td>
+          <td align="right">{{O0XAMT1}}</td>
+          <td align="right">{{O0XAMT2}}</td>
+          <td align="right"></td>
+          <td align="right">{{O0XSUM}}</td>
+        </tr>
+        <tr>
+          <td >&#9329; -1출산보육수당</td>
+          <td align="center">Q0X</td>
+          <td align="right">{{Q0XAMT}}</td>
+          <td align="right">{{Q0XAMT1}}</td>
+          <td align="right">{{Q0XAMT2}}</td>
+          <td align="right"></td>
+          <td align="right">{{Q0XSUM}}</td>
+        </tr>
+        <tr>
+          <td >&#9329; -4연구보조비</td>
+          <td align="center">H0X</td>
+          <td align="right">{{H0XAMT}}</td>
+          <td align="right">{{H0XAMT1}}</td>
+          <td align="right">{{H0XAMT2}}</td>
+          <td align="right"></td>
+          <td align="right">{{H0XSUM}}</td>
+        </tr>
+        <tr>
+          <td >&#9329; -5</td>
+          <td align="right">&nbsp;</td>
+          <td align="right">&nbsp;</td>
+          <td align="right">&nbsp;</td>
+          <td align="right">&nbsp;</td>
+          <td align="right">&nbsp;</td>
+          <td align="right">&nbsp;</td>
+        </tr>
+        <tr>
+          <td >&#9329; -6</td>
+          <td align="right">&nbsp;</td>
+          <td align="right">&nbsp;</td>
+          <td align="right">&nbsp;</td>
+          <td align="right">&nbsp;</td>
+          <td align="right">&nbsp;</td>
+          <td align="right">&nbsp;</td>
+        </tr>
+        <tr>
+          <td align="center">~</td>
+          <td align="right"></td>
+          <td align="right"></td>
+          <td align="right"></td>
+          <td align="right"></td>
+          <td align="right"></td>
+          <td align="right"></td>
+        </tr>
+        <tr>
+          <td >&#9329; -32</td>
+          <td align="center"></td>
+          <td align="right">{{GMAM70}}</td>
+          <td align="right">{{T10AMT1}}</td>
+          <td align="right">{{T10AMT2}}</td>
+          <td align="right"></td>
+          <td align="right">{{T10SUM}}</td>
+        </tr>
+        <tr>
+          <td >&#9330; 수련보조수당</td>
+          <td align="center">Y22</td>
+          <td align="right">{{Y22AMT}}</td>
+          <td align="right">{{Y22AMT1}}</td>
+          <td align="right">{{Y22AMT2}}</td>
+          <td align="right"></td>
+          <td align="right">{{Y22SUM}}</td>
+        </tr>
+        <tr>
+          <td colspan="2" >&#9331; 비과세소득 계</td>
+          <td align="right">{{NTXAMT}}</td>
+          <td align="right">{{NTXAMT1}}</td>
+          <td align="right">{{NTXAMT2}}</td>
+          <td align="right"></td>
+          <td align="right">{{NTXSUM}}</td>
+        </tr>
+        <tr>
+          <td colspan="2" >&#9331; -1감면소득 계</td>
+          <td align="right">{{GMAM70}}</td>
+          <td align="right">{{GAMAMT1}}</td>
+          <td align="right">{{GAMAMT2}}</td>
+          <td align="right"></td>
+          <td align="right">{{GAMSUM}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <!--비과세및감면소득명세 END-->
+  <!--세액명세 START-->
+  <div style="width:100%; border:1px solid black; position:absolute; top:1093px; left:0px;">
+    <table class="pdataList3">
+      <colgroup>
+      <col width="40px"/>
+      <col width="80px"/>
+      <col width="120px"/>
+      <col width="80px"/>
+      <col width="240px"/>
+      <col width="150px"/>
+      <col width="130px"/>
+      <col width="158px"/>
+      </colgroup>
+      <tbody>
+        <tr>
+          <td rowspan="8" align="center" style="font-weight:bold;line-height:20px;">III<br />
+            세<br />
+            액<br />
+            명<br />
+            세</td>
+          <td colspan="4" align="center">구&nbsp;분</td>
+          <td align="center"><img src="../img/num_78.gif" width="15" height="15"  style="vertical-align:bottom;"/> 소득세</td>
+          <td align="center"><img src="../img/num_79.gif" width="15" height="15"  style="vertical-align:bottom;"/> 지방소득세</td>
+          <td align="center"><img src="../img/num_80.gif" width="15" height="15"  style="vertical-align:bottom;"/> 농어촌특별세</td>
+        </tr>
+        <tr>
+          <td colspan="4" ><img src="../img/num_72.gif" width="15" height="15"  style="vertical-align:bottom;"/> 결정세액</td>
+          <td align="right">{{FINTAX}}</td>
+          <td align="right">{{FINJUM}}</td>
+          <td align="right">{{FINETC}}</td>
+        </tr>
+        <tr>
+          <td rowspan="4" align="center" style="line-height:25px;">기납부<br />
+            세 액</td>
+          <td rowspan="3" align="center" style="line-height:25px;"><img src="../img/num_73.gif" width="15" height="15"  style="vertical-align:middle;"/> 종(전)근무지<br />
+            (결정세액란의 <br />
+            세액 기재)</td>
+          <td rowspan="3" align="center" style="line-height:25px;">사업자<br />
+            등록<br />
+            번호</td>
+          <td align="left">{{SAUPJA1}}</td>
+          <td align="right">{{DUPTAX1}}</td>
+          <td align="right">{{DUPJUM1}}</td>
+          <td ></td>
+        </tr>
+        <tr>
+          <td align="left">{{SAUPJA2}}</td>
+          <td align="right">{{DUPTAX2}}</td>
+          <td align="right">{{DUPJUM2}}</td>
+          <td ></td>
+        </tr>
+        <tr>
+          <td align="left">{{SAUPJA3}}</td>
+          <td align="right">{{DUPTAX3}}</td>
+          <td align="right">{{DUPJUM3}}</td>
+          <td ></td>
+        </tr>
+        <tr>
+          <td colspan="3" ><img src="../img/num_74.gif" width="15" height="15"  style="vertical-align:bottom;"/> 주현근무지</td>
+          <td align="right">{{NAPTAX}}</td>
+          <td align="right">{{NAPJUM}}</td>
+          <td ></td>
+        </tr>
+        <tr>
+          <td colspan="4" ><img src="../img/num_75.gif" width="15" height="15"  style="vertical-align:bottom;"/> 납부특례세액</td>
+          <td ></td>
+          <td ></td>
+          <td ></td>
+        </tr>
+        <tr>
+          <td colspan="4" ><img src="../img/num_76.gif" width="15" height="15"  style="vertical-align:bottom;"/> 차감징수세액( <img src="../img/num_72.gif" width="15" height="15"  style="vertical-align:bottom;"/> - <img src="../img/num_73.gif" width="15" height="15"  style="vertical-align:bottom;"/> - <img src="../img/num_74.gif" width="15" height="15"  style="vertical-align:bottom;"/> - <img src="../img/num_75.gif" width="15" height="15"  style="vertical-align:bottom;"/> )</td>
+          <td align="right">{{SETTAX}}</td>
+          <td align="right">{{SETJUM}}</td>
+          <td align="right">{{CHAETC}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <!--세액명세 END-->
+  <!--영수증 START-->
+  <div style="width:100%; border:1px solid black; position:absolute; top:1334px; left:0px;">
+    <table class="pdataList4">
+      <colgroup>
+      <col width="800px"/>
+      <col width="198px"/>
+      </colgroup>
+      <tbody>
+        <tr>
+          <td colspan="2" style="border-bottom:0px hidden;padding-left:30px;">위의 원천징수액(근로소득)을 정히 영수(지급)합니다.</td>
+        </tr>
+        <tr>
+          <td colspan="2" style="border-bottom:0px hidden;" align="right">{{PAYDATE}}</td>
+        </tr>
+        <tr>
+          <td style="border-bottom:0px hidden; border-right:0px hidden; padding-right:100px;" align="right">징수의무보고자 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  {{DEPTOR}} <div id = "STMPGB" style="display:none; z-index:9999; position:absolute; left: 743px; top: 21px;"><img src="../img/stamp2/A012.png" /></img></div></td>
+          <td style="border-bottom:0px hidden; text-align:right;"> (서명 또는 인) </td>
+        </tr>
+        <tr>
+          <td colspan="2" style="padding-left:300px;">{{SEMUSO}} 귀하</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <!--영수증 END-->
+</div>
+<!--원천영수증 1 PAGE END-->
+<div style='page-break-before:always;height:0; line-height:0'></div>
+<!--원천영수증 2 PAGE START-->
+<div class="wrapper" style="margin:0px auto;width:1000px;height:1650px; border:0px dotted #000;position:relative;" >
+  <div style="position:absolute; left:931px; top:11px; width:69px; text-align:left; vertical-align:bottom; height:20px; line-height:20px; font-size:14px; text-align:right;">(제2쪽)</div>
+  <!--원천영수증 2 PAGE  좌측 START-->
+  <div style="width:540px; border:1px solid black; position:absolute; top:33px; left:0px;">
+    <table class="pdataList5">
+      <colgroup>
+      <col width="30px"/>
+      <col width="30px"/>
+      <col width="30px"/>
+      <col width="60px"/>
+      <col width="60px"/>
+      <col width="70px"/>
+      <col width="60px"/>
+      <col width="80px"/>
+      <col width="120px"/>
+      </colgroup>
+      <tbody>
+        <tr>
+          <td rowspan="50" align="center" style="font-weight:bold;line-height:80px;">IV<br />
+            정<br />
+            산<br />
+            명<br />
+            세</td>
+          <td colspan="7" align="left" style="line-height:17px;">&#12881;총급여(&#9327;,  다만  외국인단일세율 적<br />
+            &nbsp;&nbsp;
+            용시에는 연간 근로소득)</td>
+          <td align="right">{{TOTPAY}}</td>
+        </tr>
+        <tr>
+          <td colspan="7" align="left" style="line-height:30px;">&#12882;근로소득공제</td>
+          <td align="right">{{WRKGOJ}}</td>
+        </tr>
+        <tr>
+          <td colspan="7" align="left" style="line-height:30px;">&#12883;근로소득금액</td>
+          <td align="right">{{WRKAMT}}</td>
+        </tr>
+        <tr>
+          <td rowspan="34" align="center" style="line-height:60px;">종<br />
+            합<br />
+            소<br />
+            득<br />
+            공<br />
+            제</td>
+          <td rowspan="3" align="center" style="line-height:20px;">기<br />
+            본<br />
+            공<br />
+            제</td>
+          <td colspan="5" align="left">&#12884;본     인</td>
+          <td align="right">{{BASGOJ}}</td>
+        </tr>
+        <tr>
+          <td colspan="5" align="left">&#12885;배 우 자</td>
+          <td align="right">{{PARGOJ}}</td>
+        </tr>
+        <tr>
+          <td colspan="5" align="left">&#12886;부 양 가 족( {{BYACNT}} 명)</td>
+          <td align="right">{{SUPGOJ}}</td>
+        </tr>
+        <tr>
+          <td rowspan="4" align="center" style="line-height:20px;">추<br />
+            가<br />
+            공<br />
+            제</td>
+          <td colspan="5" align="left">&#12887;경 로 우 대( {{OLDCNT}} 명)</td>
+          <td align="right">{{OLDGOJ}}</td>
+        </tr>
+        <tr>
+          <td colspan="5" align="left">&#12888;장  애  인( {{JANCNT}} 명)</td>
+          <td align="right">{{HANDGJ}}</td>
+        </tr>
+        <tr>
+          <td colspan="5" align="left">&#12889;부  녀  자</td>
+          <td align="right">{{WOMGOJ}}</td>
+        </tr>
+        <tr>
+          <td colspan="5" align="left">&#12890;한 부 모 가 족</td>
+          <td align="right">{{SNGLGJ}}</td>
+        </tr>
+        <tr>
+          <td rowspan="10" align="center" style="line-height:20px;">연<br />
+            금<br />
+            보<br />
+            험<br />
+            료<br />
+            공<br />
+            제</td>
+          <td rowspan="2" colspan="4" align="left">&#12891;국민연금보험료공제</td>
+          <td align="center">대상금액</td>
+          <td align="right">{{YENAMT}}</td>
+        </tr>
+        <tr>
+          <td align="center">공제금액</td>
+          <td align="right">{{YENAMT}}</td>
+        </tr>
+        <tr>
+          <td rowspan="8" align="center" style="line-height: 20px;">&#12892; <br />공적<br />연금<br />보험료<br />공제<br /> </td>
+          <td rowspan="2" colspan="3" align="left">㉮ 공무원연금</td>
+          <td align="center">대상금액</td>
+          <td align="right">&nbsp;0</td>
+        </tr>
+        <tr>
+        	<td align="center">공제금액</td>
+        	<td align="right">&nbsp;0</td>
+        </tr>
+        <tr>
+          <td rowspan="2" colspan="3" align="left">㉯ 군인연금</td>
+          <td align="center">대상금액</td>
+          <td align="right">&nbsp;0</td>
+        </tr>
+        <tr>
+        	<td align="center">공제금액</td>
+        	<td align="right">&nbsp;0</td>
+        </tr>
+        <tr>
+          <td rowspan="2" colspan="3" align="left">㉰ 사립학교교직원연금</td>
+          <td align="center">대상금액</td>
+          <td align="right">&nbsp;0</td>
+        </tr>
+        <tr>
+        	<td align="center">공제금액</td>
+        	<td align="right">&nbsp;0</td>
+        </tr>
+        <tr>
+          <td rowspan="2" colspan="3" align="left">㉱ 별정우체국연금</td>
+          <td align="center">대상금액</td>
+          <td align="right">&nbsp;0</td>
+        </tr>
+        <tr>
+        	<td align="center">공제금액</td>
+        	<td align="right">&nbsp;0</td>
+        </tr>
+        <tr>
+          <td rowspan="17" align="center" style="line-height:60px;">특<br />
+            별<br />
+            공<br />
+            제</td>
+          <td rowspan="4" align="center" style="line-height: 20px;">&#12893; <br />보험료</td>
+          <td rowspan="2" colspan="3" align="left" style="line-height:20px;">㉮ 건강보험료(노인장<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            기요양보험료포함)</td>
+          <td align="center">대상금액</td>
+          <td align="right">{{MEDBOH}}</td>
+        </tr>
+        <tr>
+          <td align="center">공제금액</td>
+          <td align="right">{{MEDBOH}}</td>
+        </tr>
+        <tr>
+          <td rowspan="2" colspan="3" align="left">㉯ 고용보험료</td>
+          <td align="center">대상금액</td>
+          <td align="right">{{EMPBOH}}</td>
+        </tr>
+        <tr>
+          <td align="center">공제금액</td>
+          <td align="right">{{EMPBOH}}</td>
+        </tr>
+        <tr>
+          <td rowspan="11" align="center" style="line-height: 20px;" >&#12894; <br />주택<br />자금</td>
+          <td colspan="4" rowspan="2" align="center" style="padding:0px;height:83px;"><table class="pdataList3" style="border:0px hidden;height:100%;">
+              <tr>
+                <td rowspan="2" style="line-height:20px; width: 185px;">㉮ 주택임<br/>
+                  차차입금원<br/>
+                  리금상환액</td>
+                <td align="center">대출기관</td>
+              </tr>
+              <tr>
+                <td align="center">거주자</td>
+              </tr>
+            </table></td>
+          <td align="right">{{HOSWN1}}</td>
+        </tr>
+        <tr>
+          <td align="right">{{HOSWN2}}</td>
+        </tr>
+        <tr>
+          <td rowspan="9" align="center" style="line-height:20px;">㉯장기<br />
+            주택저<br />
+            당차입<br />
+            금이자<br />
+            상환액</td>
+          <td rowspan="3" align="center" style="line-height:20px;font-size:90%">2011년<br />이전<br />
+            차입분</td>
+          <td colspan="2" align="center" style="font-size:100%;">15년미만</td>
+          <td align="right">{{HOSIJ1}}</td>
+        </tr>
+        <tr>
+          <td colspan="2" align="center" style="font-size:100%;">15년~29년</td>
+          <td align="right">{{HOSIJ2}}</td>
+        </tr>
+        <tr>
+          <td colspan="2" align="center" style="font-size:100%;">30년 이상</td>
+          <td align="right">{{HOSIJ3}}</td>
+        </tr>
+        <tr>
+          <td rowspan="2" align="center" style="line-height:20px;font-size:90%">2012년<br />이후<br />
+            차입분<br />
+            (15년<br />이상)</td>
+          <td colspan="2" align="center" style="line-height:20px;font-size:90%">고정금리·비<br />
+            거치상환대출</td>
+          <td align="right">{{HOSIJ4}}</td>
+        </tr>
+        
+        <tr>
+          <td colspan="2" align="center" style="font-size:100%;">기타대출</td>
+          <td align="right">{{HOSIJ5}}</td>
+        </tr>
+        
+        <tr>
+          <td rowspan="4" align="center" style="line-height:20px;font-size:90%">2015년<br />이후<br />
+            차입분</td>
+          
+          <td rowspan="3" align="center" style="line-height:20px;font-size:90%">15년<br />
+            이상</td>
+          <td rowspan="1" align="center" style="line-height:20px;font-size:90%">고정금리면서,<br />비거치상환<br />대출</td>
+          <td align="right">{{HOSIJ6}}</td>
+           
+        </tr>
+        
+        <tr>
+            <td rowspan="1" align="center" style="line-height:20px;font-size:90%">고정금리거나,비<br />
+                거치상환대출</td>
+            <td align="right">{{HOSIJ7}}</td>
+        </tr>
+        
+        <tr>
+            <td rowspan="1" align="center" style="line-height:20px;font-size:90%">그밖의 대출</td>
+            <td align="right">{{HOSIJ8}}</td>
+        </tr>
+        
+        <tr>
+          
+          <td rowspan="1" align="center" style="line-height:20px;font-size:90%">10년<br />
+            ~15년</td>
+          <td rowspan="1" align="center" style="line-height:20px;font-size:90%">고정금리거나,비<br />
+                거치상환대출</td>
+          <td align="right">{{HOSIJ9}}</td>
+           
+        </tr>
+        
+        
+        <tr>
+          <td colspan="5" align="left">&#12895;기부금(이월분)</td>
+          <td align="right">{{PASDON}}</td>
+        </tr>
+        <tr>
+          <td colspan="5" align="left">&#12977;계</td>
+          <td align="right">{{SPCSUM}}</td>
+        </tr>
+        <tr>
+          <td colspan="7" align="left">&#12978;차 감 소 득 금 액</td>
+          <td align="right" >{{DEDAMT}}</td>
+        </tr>
+        <tr>
+          <td rowspan="11" align="center">그<br />
+            <br />
+            밖<br />
+            의<br />
+            <br />
+            소<br />
+            득<br />
+            공<br />
+            제</td>
+          <td colspan="6" align="left">&#12979;개인연금저축</td>
+          <td align="right">{{PERYEN}}</td>
+        </tr>
+        <tr>
+          <td colspan="6" align="left">&#12980;소기업·소상공인 공제부금</td>
+          <td align="right">{{SOSGOJ}}</td>
+        </tr>
+        <tr>
+          <td colspan="3" rowspan="3" align="center" style="line-height:20px;" >&#12981;주택<br />마련저축<br />소득공제</td>
+          <td colspan="3" align="left">㉮  청약저축</td>
+          <td align="right">{{HOSSV1}}</td>
+        </tr>
+        <tr>
+          <td colspan="3" align="left">㉯ 주택청약종합저축</td>
+          <td align="right">{{HOSSV2}}</td>
+        </tr>
+        <tr>
+          <td colspan="3" align="left"><span style="line-height:20px;">㉰</span> 근로자주택마련저축</td>
+          <td align="right">{{HOSSV4}}</td>
+        </tr>
+        <tr>
+          <td colspan="6" align="left">&#12982;투자조합출자 등</td>
+          <td align="right">{{TUJGOJ}}</td>
+        </tr>
+        <tr>
+          <td colspan="6" align="left">&#12983;신용카드 등 사용액</td>
+          <td align="right">{{CARDGJ}}</td>
+        </tr>
+        <tr>
+          <td colspan="6" align="left">&#12984;우리사주조합 출연금</td>
+          <td align="right">{{SAJUJH}}</td>
+        </tr>
+<!--         <tr>
+          <td colspan="6" align="left">&#12985;우리사주조합 기부금(2014년 이전)</td>
+          <td align="right">{{DONGJ3}}</td>
+        </tr> 2018.01.22 삭제 -->
+        <tr>
+          <td colspan="6" align="left">&#12985;고용유지 중소기업 근로자</td>
+          <td align="right">{{GOWRKG}}</td>
+        </tr>
+<!--         <tr>
+          <td colspan="6" align="left">&#12987;목돈 안 드는 전세 이자상환액</td>
+          <td align="right">{{MOKGOJ}}</td>
+        </tr> 2018.01.22 삭제-->
+        <tr>
+          <td colspan="6" align="left">&#12986;장기집합투자증권저축</td>
+          <td align="right">{{JANGOJ}}</td>
+        </tr>
+        <tr>
+          <td colspan="6" align="left" style="height:28px">&#12987;그 밖의 소득공제 계</td>
+          <td align="right">{{ETCGOJ}}</td>
+        </tr>
+        <tr>
+          <td colspan="7" align="left" style="height:28px">&#12988;소득공제 종합한도 초과액</td>
+          <td align="right">{{SPCEXC}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <!--원천영수증 2 PAGE  좌측 END-->
+  <!--원천영수증 2 PAGE  우측 START-->
+  <div style="width:458px; border : 1px solid black; position:absolute; top:33px; left:540px;">
+    <table class="pdataList6">
+      <colgroup>
+      <col width="30px"/>
+      <col width="30px"/>
+      <col width="30px"/>
+      <col width="60px"/>
+      <col width="60px"/>
+      <col width="100px"/>
+      <col width="110px"/>
+      </colgroup>
+      <tbody>
+        <tr>
+          <td colspan="6" align="left" style="line-height:20px; height: 34px;">&#12989;종합소득 과세표준</td>
+          <td align="right">{{TAXBAS}}</td>
+        </tr>
+        <tr>
+          <td colspan="6" align="left" style="line-height:20px; height: 30px;">&#12990;산출세액</td>
+          <td align="right">{{CALTAX}}</td>
+        </tr>
+        <tr>
+          <td rowspan="5" align="center" style="line-height:30px;">세<br />
+            액<br />
+            감<br />
+            면</td>
+          <td colspan="5" align="left" style="line-height:30px;" >&#12991;「소득세법」</td>
+          <td align="right">{{LAWGOJ}}</td>
+        </tr>
+        <tr>
+          <td colspan="5" align="left" style="line-height:30px;" ><img src="../img/num_51.gif" width="15" height="15" style="vertical-align:middle;"/> 「조세특례제한법」( <img src="../img/num_52.gif" width="15" height="15" style="vertical-align:middle;"/> 제외 )</td>
+          <td align="right">{{JOLGM1}}</td>
+        </tr>
+        <tr>
+          <td colspan="5" align="left" style="line-height:30px;height:30px;" ><img src="../img/num_52.gif" width="15" height="15" style="vertical-align:middle;"/> 「조세특례제한법」제30조</td>
+          <td align="right">{{JOLGM2}}</td>
+        </tr>
+        <tr>
+          <td colspan="5" align="left" style="line-height:30px;"><img src="../img/num_53.gif" width="15" height="15" style="vertical-align:middle;"/> 조세조약</td>
+          <td align="right">{{JOJOGM}}</td>
+        </tr>
+        <tr>
+          <td colspan="5" align="left" style="line-height:31px;"><img src="../img/num_54.gif" width="15" height="15" style="vertical-align:middle;"/> 세액감면계</td>
+          <td align="right">{{TAXGAM}}</td>
+        </tr>
+        <tr>
+          <td rowspan="37" align="center" style="line-height:40px;">세<br />
+            액<br />
+            공<br />
+            제</td>
+          <td colspan="5" align="left" style="line-height:31px;"><img src="../img/num_55.gif" width="15" height="15" style="vertical-align:middle;"/> 근로소득</td>
+          <td align="right">{{WRKTGJ}}</td>
+        </tr>
+        <tr>
+          <td colspan="2" rowspan="2" align="left" ><img src="../img/num_56.gif" width="15" height="15" style="vertical-align:middle;"/> 자녀</td>
+          <td colspan="3" align="left" >공제대상자녀&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{MORCNT}}&nbsp;&nbsp;&nbsp; )명</td>
+          <td align="right">{{MOREGJ}}</td>
+        </tr>
+        <tr>
+          <td colspan="3" align="left" >출산.입양자&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; (&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{BIRCNT}}&nbsp;&nbsp;&nbsp; )명</td>
+          <td align="right">{{BIRGOJ}}</td>
+        </tr>
+        <tr>
+          <td rowspan="6" align="center"  style="line-height:60px;">연<br />
+            금<br />
+            계<br />
+            좌</td>
+          <td colspan="3" rowspan="2" align="left" ><img src="../img/num_57.gif" width="15" height="15" style="vertical-align:middle;"/> 과학기술인</td>
+          <td align="center" style="letter-spacing:1px;" >공제대상금액</td>
+          <td align="right">{{YENDA3}}</td>
+        </tr>
+        <tr>
+          <td align="center" style="letter-spacing:4px;">세액공제액</td>
+          <td align="right">{{YENGO3}}</td>
+        </tr>
+        <tr>
+          <td colspan="3" rowspan="2" align="left" ><img src="../img/num_58.gif" width="15" height="15" style="vertical-align:middle;"/> 「근로자퇴직급여 <br/>&nbsp;&nbsp;&nbsp;&nbsp;보장법」에 따른 <br/>&nbsp;&nbsp;&nbsp;&nbsp;퇴직연금</td>
+          <td align="center"  style="letter-spacing:1px;">공제대상금액</td>
+          <td align="right">{{YENDA1}}</td>
+        </tr>
+        <tr>
+          <td align="center"  style="letter-spacing:4px;">세액공제액</td>
+          <td align="right">{{YENGO1}}</td>
+        </tr>
+        <tr>
+          <td colspan="3" rowspan="2" align="left" ><img src="../img/num_59.gif" width="15" height="15" style="vertical-align:middle;"/> 연금저축</td>
+          <td align="center"  style="letter-spacing:1px;">공제대상금액</td>
+          <td align="right">{{YENDA2}}</td>
+        </tr>
+        <tr>
+          <td align="center"  style="letter-spacing:4px;">세액공제액</td>
+          <td align="right">{{YENGO2}}</td>
+        </tr>
+        <tr>
+          <td rowspan="22" align="center"  style="line-height:123px;">특<br />
+            별<br />
+            세<br />
+            액<br />
+            공<br />
+            제</td>
+          <td colspan="3" rowspan="4" align="left" style="padding:0px;height:160px;"><table class="pdataList3" style="border:0px hidden;height:100%;">
+              <tr>
+                <td rowspan="2" style="line-height:20px;"><img src="../img/num_60.gif" width="15" height="15" style="vertical-align:middle;"/> 보험료</td>
+                <td  style="line-height:20px;height:40px;">보장성</td>
+              </tr>
+              <tr>
+                <td style="line-height:20px;">장애인전용<br />
+                  보장성</td>
+              </tr>
+            </table></td>
+          <td align="center"  style="letter-spacing:1px;">공제대상금액</td>
+          <td align="right">{{BOHDAE}}</td>
+        </tr>
+        <tr>
+          <td align="center"  style="letter-spacing:4px;">세액공제액</td>
+          <td align="right">{{BOHGOJ}}</td>
+        </tr>
+        <tr>
+          <td align="center" style="letter-spacing:1px;" >공제대상금액</td>
+          <td align="right">{{JBHDAE}}</td>
+        </tr>
+        <tr>
+          <td align="center"  style="letter-spacing:4px;">세액공제액</td>
+          <td align="right">{{JBHGOJ}}</td>
+        </tr>
+        <tr>
+          <td colspan="3" rowspan="2" align="left" ><img src="../img/num_61.gif" width="15" height="15" style="vertical-align:middle;"/>의료비</td>
+          <td align="center"  style="letter-spacing:1px;">공제대상금액</td>
+          <td align="right">{{MEDDAE}}</td>
+        </tr>
+        <tr>
+          <td align="center"  style="letter-spacing:4px;">세액공제액</td>
+          <td align="right">{{MEDGOJ}}</td>
+        </tr>
+        <tr>
+          <td colspan="3" rowspan="2" align="left" ><img src="../img/num_62.gif" width="15" height="15" style="vertical-align:middle;"/> 교육비</td>
+          <td align="center"  style="letter-spacing:1px;">공제대상금액</td>
+          <td align="right">{{EDUDAE}}</td>
+        </tr>
+        <tr>
+          <td align="center"  style="letter-spacing:4px;">세액공제액</td>
+          <td align="right">{{EDUGOJ}}</td>
+        </tr>
+        <tr>
+          <td rowspan="12" align="center"  style="line-height:20px;"><img src="../img/num_63.gif" width="15" height="15" style="vertical-align:middle;"/><br />기<br />
+            부<br />
+            금</td>
+          <td rowspan="4" align="left" >㉮정치<br />&nbsp;&nbsp;&nbsp;자금<br />&nbsp;&nbsp;기부금</td>
+          <td rowspan="2" align="left" >10만원<br />
+            이하</td>
+          <td align="center"  style="letter-spacing:1px;">공제대상금액</td>
+          <td align="right">{{DONDA0}}</td>
+        </tr>
+        <tr>
+          <td align="center"  style="letter-spacing:4px;">세액공제액</td>
+          <td align="right">{{POLGJ0}}</td>
+        </tr>
+        <tr>
+          <td rowspan="2" align="left" >10만원<br />
+            초과</td>
+          <td align="center" style="letter-spacing:1px;" >공제대상금액</td>
+          <td align="right">{{DONDA1}}</td>
+        </tr>
+        <tr>
+          <td align="center"  style="letter-spacing:4px;">세액공제액</td>
+          <td align="right">{{POLGJ1}}</td>
+        </tr>
+        <tr>
+          <td colspan="2" rowspan="2" align="left" >㉯ 법정기부금</td>
+          <td align="center"  style="letter-spacing:1px;">공제대상금액</td>
+          <td align="right">{{DONDA2}}</td>
+        </tr>
+        <tr>
+          <td align="center"  style="letter-spacing:4px;">세액공제액</td>
+          <td align="right">{{RAWGOJ}}</td>
+        </tr>
+        <tr>
+          <td colspan="2" rowspan="2" align="left" >㉰ 우리사주조합<br />&nbsp;&nbsp;&nbsp;&nbsp;기부금</td>
+          <td align="center"  style="letter-spacing:1px;">공제대상금액</td>
+          <td align="right">{{SAJUDA}}</td>
+        </tr>
+        <tr>
+          <td align="center"  style="letter-spacing:4px;">세액공제액</td>
+          <td align="right">{{SAJUGJ}}</td>
+        </tr>
+        
+        <tr>
+          <td colspan="2" rowspan="2" align="left" ><span style="line-height:20px;">㉱</span> 지정기부금<br/>(종교단체외)</td>
+          <td align="center"  style="letter-spacing:1px;">공제대상금액</td>
+          <td align="right">{{DONDA3}}</td>
+        </tr>
+        <tr>
+          <td align="center"  style="letter-spacing:4px;">세액공제액</td>
+          <td align="right">{{JIJYGJ}}</td>
+        </tr>
+        <tr>
+          <td colspan="2" rowspan="2" align="left" ><span style="line-height:20px;">㉲</span> 지정기부금<br/>(종교단체)</td>
+          <td align="center"  style="letter-spacing:1px;">공제대상금액</td>
+          <td align="right">{{DONDA4}}</td>
+        </tr>
+        <tr>
+          <td align="center"  style="letter-spacing:4px;">세액공제액</td>
+          <td align="right">{{JIJNGJ}}</td>
+        </tr>
+        <tr>
+          <td colspan="4" align="left" style="line-height:30px;"><img src="../img/num_64.gif" width="15" height="15" style="vertical-align:middle;"/> 계</td>
+          <td align="right">{{SPCGAMSUM}}</td>
+        </tr>
+        <tr>
+          <td colspan="4" align="left" style="height: 30px;" ><img src="../img/num_65.gif" width="15" height="15" style="vertical-align:middle;"/> 표준세액공제</td>
+          <td align="right">{{STNDGJ}}</td>
+        </tr>
+        <tr>
+          <td colspan="5" align="left" style="line-height:30px;"><img src="../img/num_66.gif" width="15" height="15" style="vertical-align:middle;"/> 납세조합공제</td>
+          <td align="right">{{NAPGOJ}}</td>
+        </tr>
+        <tr>
+          <td colspan="5" align="left" style="line-height:30px;"><img src="../img/num_67.gif" width="15" height="15" style="vertical-align:middle;"/> 주택차입금</td>
+          <td align="right">&nbsp;0</td>
+        </tr>
+        <tr>
+          <td colspan="5" align="left" style="line-height:30px;"><img src="../img/num_68.gif" width="15" height="15" style="vertical-align:middle;"/> 외국납부</td>
+          <td align="right">{{FORGOJ}}</td>
+        </tr>
+        <tr>
+          <td colspan="4" rowspan="2" align="left" ><img src="../img/num_69.gif" width="15" height="15" style="vertical-align:middle;"/> 월세액</td>
+          <td align="center"  style="letter-spacing:1px;" >공제대상금액</td>
+          <td align="right">{{HOSDAE}}</td>
+        </tr>
+        <tr>
+          <td align="center"  style="letter-spacing:11px;">월 세 액</td>
+          <td align="right">{{HOSMON}}</td>
+        </tr>
+        <tr>
+          <td colspan="5" align="left" style="height: 39px;" ><img src="../img/num_70.gif" width="15" height="15" style="vertical-align:middle;"/> 세 액 공 제 계</td>
+          <td align="right">{{TAXGOJ}}</td>
+        </tr>
+        <tr>
+          <td colspan="6" align="left"  style="line-height:25px; height:40px; "><img src="../img/num_71.gif" width="15" height="15" style="vertical-align:middle;"/> 결 정 세 액( &#12990; - <img src="../img/num_54.gif" width="15" height="15" style="vertical-align:middle;"/> - <img src="../img/num_70.gif" width="15" height="15" style="vertical-align:middle;"/>)</td>
+          <td align="right" >{{FINTAX}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <!--원천영수증 2 PAGE  우측 END-->
+</div>
+<!--원천영수증 2 PAGE END-->
+<div style='page-break-before:always;height:0; line-height:0'></div>
+<!--원천영수증 3 PAGE START-->
+<div class="wrapper" style="margin:0px auto;width:1000px;height:1450px; border:0px dotted #000;position:relative;" ><span id="BOHEMP_TEMP" style="display:none;">건강보험료 :{{BOHAMT}}, 고용보험료 :{{EMPAMT}}</span> 
+  <div style="position:absolute; left:931px; top:21px; width:69px; text-align:left; vertical-align:bottom; height:20px; line-height:20px; font-size:14px;text-align:right;">(제3쪽)</div>
+  <div style="width:1000px; border:0px solid black; position:absolute; top:43px; left:0px;">
+    <table class="pdataList7">
+      <colgroup>
+      <col width="30"/>
+      <col width="90"/>
+      <col width="20"/>
+      <col width="20"/>
+      <col width="30"/>
+      <col width="40"/>
+      <col width="50"/>
+      <col width="50"/>
+      <col width="50"/>
+      <col width="50"/>
+      <col width="63"/>
+      <col width="63"/>
+      <col width="63"/>
+      <col width="63"/>
+      <col width="63"/>
+      <col width="53"/>
+      </colgroup>
+      <tbody>
+        <tr>
+          <td colspan="16" align="left" style="line-height:150%;font-size:150%"><img src="../img/num_68.gif" width="15" height="15"  style="vertical-align:middle;"/> 소득공제 명세(인적공제항목은 해당란에 &quot;○&quot; 표시(장애인 해당시 해당코드를 기재)를 하며, 각종 소득공제 항목은 공제를 위하여<br />
+            실제 지출한 금액을 적습니다)</td>
+        </tr>
+        <tr>
+          <td colspan="6" align="center">인적공제 항목</td>
+          <td colspan="10" align="center" >각종 소득공제.세액공제 항목</td>
+        </tr>
+        <tr>
+          <td align="center" style="line-height:18px;height:45px;">관계<br />
+            코드</td>
+          <td align="center" >성  명</td>
+          <td colspan="2" align="center" style="line-height:18px;">기본<br />
+            공제</td>
+          <td align="center" style="line-height:18px;">경로<br />
+            우대<br /></td>
+          <td align="center" style="line-height:18px;">출산<br />
+            입양<br /></td>
+          <td rowspan="2" align="center" style="line-height:18px;">자료<br />
+            구분<br /></td>
+          <td colspan="4" align="center" >보험료</td>
+          <td colspan="3" align="center" >의료비</td>
+          <td colspan="2" align="center" >교육비</td>
+        </tr>
+        <tr>
+          <td align="center" style="line-height:18px;height:70px;">내·<br />
+            외<br />
+            국인</td>
+          <td align="center" >주민등록번호</td>
+          <td align="center" style="line-height:18px;">부<br />
+            녀<br />
+            자</td>
+          <td align="center" style="line-height:18px;">한<br />
+            부<br />
+            모</td>
+          <td align="center" style="line-height:18px;">장<br />
+            애<br />
+            인</td>
+          <td align="center" style="line-height:18px;">자녀</td>
+          <td align="center" style="line-height:18px;">건강</td>
+          <td align="center" >고용</td>
+          <td align="center" >보장성</td>
+          <td align="center" >장애인<br/>전용<br/>보장성</td>
+          <td align="center" >일반</td>
+          <td align="center" >난임</td>
+          <td align="center" >장애인·<br/>건강보험<br/>산정특례자</td>
+          <td align="center" >일반</td>
+          <td align="center" >장애인<br/>특수교육</td>
+        </tr>
+        <tr >
+          <td colspan="2" rowspan="2" align="center" style="font-size:100%;">인적공제 항목에<br />
+            해당하는 인원수를 기재<br />
+            <br />
+            (자녀&nbsp; {{JACNT}} 명)</td>
+          <td colspan="2" align="center" style="border-bottom:1px dotted #000;">{{BASCNT}}</td>
+          <td align="center"  style="border-bottom:1px dotted #000;">{{OLDCNT}}</td>
+          <td align="center"  style="border-bottom:1px dotted #000;">{{BIRCNT}}</td>
+          <td align="center"  style="border-bottom:1px dotted #000;">국세청</td>
+          <td align="right"  style="border-bottom:1px dotted #000;font-size:100%;">{{BOHM41SUM}}</td>
+          <td align="right"  style="border-bottom:1px dotted #000;font-size:100%;">{{BOHM51SUM}}</td>
+          <td align="right"  style="border-bottom:1px dotted #000;font-size:100%;">{{BOHM11SUM}}</td>
+          <td align="right"  style="border-bottom:1px dotted #000;font-size:100%;">{{BOHM21SUM}}</td>
+          <td align="right"  style="border-bottom:1px dotted #000;font-size:100%;">{{MEDSUM1}}</td>
+          <td align="right"  style="border-bottom:1px dotted #000;font-size:100%;">{{MEDSUM3}}</td>
+          <td align="right"  style="border-bottom:1px dotted #000;font-size:100%;">{{MEDSUM5}}</td>
+          <td align="right"  style="border-bottom:1px dotted #000;font-size:100%;">{{EDUSUM1}}</td>
+          <td align="right"  style="border-bottom:1px dotted #000;font-size:100%;">{{EDUSUM3}}</td>
+        </tr>
+        <tr>
+          <td align="center" style="border-top:1px dotted #000;">{{WOMCNT}}</td>
+          <td align="center" style="border-top:1px dotted #000;">{{SNGCNT}}</td>
+          <td align="center" style="border-top:1px dotted #000;">{{JANCNT}}</td>
+          <td align="center" style="border-top:1px dotted #000;">{{MORCNT}}</td>
+          <td align="center" style="border-top:1px dotted #000;">기타</td>
+          <td align="right" style="border-top:1px dotted #000;font-size:100%;">{{BOHM42SUM}}</td>
+          <td align="right" style="border-top:1px dotted #000;font-size:100%;">{{BOHM52SUM}}</td>
+          <td align="right" style="border-top:1px dotted #000;font-size:100%;">{{BOHM12SUM}}</td>
+          <td align="right" style="border-top:1px dotted #000;font-size:100%;">{{BOHM22SUM}}</td>
+          <td align="right" style="border-top:1px dotted #000;font-size:100%;">{{MEDSUM2}}</td>
+          <td align="right" style="border-top:1px dotted #000;font-size:100%;">{{MEDSUM4}}</td>
+          <td align="right" style="border-top:1px dotted #000;font-size:100%;">{{MEDSUM6}}</td>
+          <td align="right" style="border-top:1px dotted #000;font-size:100%;">{{EDUSUM2}}</td>
+          <td align="right" style="border-top:1px dotted #000;font-size:100%;">{{EDUSUM4}}</td>
+        </tr>
+        <tr >
+          <td align="center" style="border-bottom:1px dotted #000;">{{RELCOD1}}</td>
+          <td align="center" style="border-bottom:1px dotted #000;">{{USERNM1}}</td>
+          <td colspan="2" align="center" style="border-bottom:1px dotted #000;">○</td>
+          <td align="center"  style="border-bottom:1px dotted #000;">{{OLDGOJ1}}</td>
+          <td align="center"  style="border-bottom:1px dotted #000;">&nbsp;</td>
+          <td align="center"  style="border-bottom:1px dotted #000;">국세청</td>
+          <td align="right"  style="border-bottom:1px dotted #000;font-size:100%;">{{BOHM411}}</td>
+          <td align="right"  style="border-bottom:1px dotted #000;font-size:100%;">{{BOHM511}}</td>
+          <td align="right"  style="border-bottom:1px dotted #000;font-size:100%;">{{BOHM111}}</td>
+          <td align="right"  style="border-bottom:1px dotted #000;font-size:100%;">{{BOHM211}}</td>
+          <td align="right"  style="border-bottom:1px dotted #000;font-size:100%;">{{MEDAMT11}}</td>
+          <td align="right"  style="border-bottom:1px dotted #000;font-size:100%;">{{MEDAMT31}}</td>
+          <td align="right"  style="border-bottom:1px dotted #000;font-size:100%;">{{MEDAMT51}}</td>
+          <td align="right"  style="border-bottom:1px dotted #000;font-size:100%;">{{EDUAMT11}}</td>
+          <td align="right"  style="border-bottom:1px dotted #000;font-size:100%;">{{EDUAMT31}}</td>
+        </tr>
+        <tr>
+          <td align="center" style="border-top:1px dotted #000;">{{NATGBN1}}</td>
+          <td align="center" style="border-top:1px dotted #000;background:#eee">(근로자본인)</td>
+          <td align="center" style="border-top:1px dotted #000;">{{WOMGOJ1}}</td>
+          <td align="center" style="border-top:1px dotted #000;">{{SNGGOJ1}}</td>
+          <td align="center" style="border-top:1px dotted #000;">{{HANGOJ1}}</td>
+          <td align="center" style="border-top:1px dotted #000;">&nbsp;</td>
+          <td align="center" style="border-top:1px dotted #000;">기타</td>
+          <td align="right" style="border-top:1px dotted #000;font-size:100%;">{{BOHM421}}</td>
+          <td align="right" style="border-top:1px dotted #000;font-size:100%;">{{BOHM521}}</td>
+          <td align="right" style="border-top:1px dotted #000;font-size:100%;">{{BOHM121}}</td>
+          <td align="right" style="border-top:1px dotted #000;font-size:100%;">{{BOHM221}}</td>
+          <td align="right" style="border-top:1px dotted #000;font-size:100%;">{{MEDAMT21}}</td>
+          <td align="right" style="border-top:1px dotted #000;font-size:100%;">{{MEDAMT41}}</td>
+          <td align="right" style="border-top:1px dotted #000;font-size:100%;">{{MEDAMT61}}</td>
+          <td align="right" style="border-top:1px dotted #000;font-size:100%;">{{EDUAMT21}}</td>
+          <td align="right" style="border-top:1px dotted #000;font-size:100%;">{{EDUAMT41}}</td>
+        </tr>
+        <tr >
+          <td align="center" style="border-bottom:1px dotted #000;">{{RELCOD2}}</td>
+          <td align="center" style="border-bottom:1px dotted #000;">{{USERNM2}}</td>
+          <td colspan="2" align="center" style="border-bottom:1px dotted #000;">{{BASGOJ2}}</td>
+          <td align="center"  style="border-bottom:1px dotted #000;">{{OLDGOJ2}}</td>
+          <td align="center"  style="border-bottom:1px dotted #000;">{{BRGONG2}}</td>
+          <td align="center"  style="border-bottom:1px dotted #000;">국세청</td>
+          <td align="right"  style="border-bottom:1px dotted #000;font-size:100%;">{{BOHM412}}</td>
+          <td align="right"  style="border-bottom:1px dotted #000;font-size:100%;">{{BOHM512}}</td>
+          <td align="right"  style="border-bottom:1px dotted #000;font-size:100%;">{{BOHM112}}</td>
+          <td align="right"  style="border-bottom:1px dotted #000;font-size:100%;">{{BOHM212}}</td>
+          <td align="right"  style="border-bottom:1px dotted #000;font-size:100%;">{{MEDAMT12}}</td>
+          <td align="right"  style="border-bottom:1px dotted #000;font-size:100%;">{{MEDAMT32}}</td>
+          <td align="right"  style="border-bottom:1px dotted #000;font-size:100%;">{{MEDAMT52}}</td>
+          <td align="right"  style="border-bottom:1px dotted #000;font-size:100%;">{{EDUAMT12}}</td>
+          <td align="right"  style="border-bottom:1px dotted #000;font-size:100%;">{{EDUAMT32}}</td>
+        </tr>
+        <tr>
+          <td align="center" style="border-top:1px dotted #000;">{{NATGBN2}}</td>
+          <td align="center" style="border-top:1px dotted #000; font-size:100%;">{{JUMINO2}}</td>
+          <td align="center" style="border-top:1px dotted #000;background:#eee">{{WOMGOJ2}}</td>
+          <td align="center" style="border-top:1px dotted #000;background:#eee">{{SNGGOJ2}}</td>
+          <td align="center" style="border-top:1px dotted #000;">{{HANGOJ2}}</td>
+          <td align="center" style="border-top:1px dotted #000;">{{MORGOJ2}}</td>
+          <td align="center" style="border-top:1px dotted #000;">기타</td>
+          <td align="right" style="border-top:1px dotted #000;font-size:100%;">{{BOHM422}}</td>
+          <td align="right" style="border-top:1px dotted #000;font-size:100%;">{{BOHM522}}</td>
+          <td align="right" style="border-top:1px dotted #000;font-size:100%;">{{BOHM122}}</td>
+          <td align="right" style="border-top:1px dotted #000;font-size:100%;">{{BOHM222}}</td>
+          <td align="right" style="border-top:1px dotted #000;font-size:100%;">{{MEDAMT22}}</td>
+          <td align="right" style="border-top:1px dotted #000;font-size:100%;">{{MEDAMT42}}</td>
+          <td align="right" style="border-top:1px dotted #000;font-size:100%;">{{MEDAMT62}}</td>
+          <td align="right" style="border-top:1px dotted #000;font-size:100%;">{{EDUAMT22}}</td>
+          <td align="right" style="border-top:1px dotted #000;font-size:100%;">{{EDUAMT42}}</td>
+        </tr>
+        <tr >
+          <td align="center" style="border-bottom:1px dotted #000;">{{RELCOD3}}</td>
+          <td align="center" style="border-bottom:1px dotted #000;">{{USERNM3}}</td>
+          <td colspan="2" align="center" style="border-bottom:1px dotted #000;">{{BASGOJ3}}</td>
+          <td align="center"  style="border-bottom:1px dotted #000;">{{OLDGOJ3}}</td>
+          <td align="center"  style="border-bottom:1px dotted #000;">{{BRGONG3}}</td>
+          <td align="center"  style="border-bottom:1px dotted #000;">국세청</td>
+          <td align="right"  style="border-bottom:1px dotted #000;font-size:100%;">{{BOHM413}}</td>
+          <td align="right"  style="border-bottom:1px dotted #000;font-size:100%;">{{BOHM513}}</td>
+          <td align="right"  style="border-bottom:1px dotted #000;font-size:100%;">{{BOHM113}}</td>
+          <td align="right"  style="border-bottom:1px dotted #000;font-size:100%;">{{BOHM213}}</td>
+          <td align="right"  style="border-bottom:1px dotted #000;font-size:100%;">{{MEDAMT13}}</td>
+          <td align="right"  style="border-bottom:1px dotted #000;font-size:100%;">{{MEDAMT33}}</td>
+          <td align="right"  style="border-bottom:1px dotted #000;font-size:100%;">{{MEDAMT53}}</td>
+          <td align="right"  style="border-bottom:1px dotted #000;font-size:100%;">{{EDUAMT13}}</td>
+          <td align="right"  style="border-bottom:1px dotted #000;font-size:100%;">{{EDUAMT33}}</td>
+        </tr>
+        <tr>
+          <td align="center" style="border-top:1px dotted #000;">{{NATGBN3}}</td>
+          <td align="center" style="border-top:1px dotted #000;font-size:100%;">{{JUMINO3}}</td>
+          <td align="center" style="border-top:1px dotted #000;background:#eee">{{WOMGOJ3}}</td>
+          <td align="center" style="border-top:1px dotted #000;background:#eee">{{SNGGOJ3}}</td>
+          <td align="center" style="border-top:1px dotted #000;">{{HANGOJ3}}</td>
+          <td align="center" style="border-top:1px dotted #000;">{{MORGOJ3}}</td>
+          <td align="center" style="border-top:1px dotted #000;">기타</td>
+          <td align="right" style="border-top:1px dotted #000;font-size:100%;">{{BOHM423}}</td>
+          <td align="right" style="border-top:1px dotted #000;font-size:100%;">{{BOHM523}}</td>
+          <td align="right" style="border-top:1px dotted #000;font-size:100%;">{{BOHM123}}</td>
+          <td align="right" style="border-top:1px dotted #000;font-size:100%;">{{BOHM223}}</td>
+          <td align="right" style="border-top:1px dotted #000;font-size:100%;">{{MEDAMT23}}</td>
+          <td align="right" style="border-top:1px dotted #000;font-size:100%;">{{MEDAMT43}}</td>
+          <td align="right" style="border-top:1px dotted #000;font-size:100%;">{{MEDAMT63}}</td>
+          <td align="right" style="border-top:1px dotted #000;font-size:100%;">{{EDUAMT23}}</td>
+          <td align="right" style="border-top:1px dotted #000;font-size:100%;">{{EDUAMT43}}</td>
+        </tr>
+        <tr >
+          <td align="center" style="border-bottom:1px dotted #000;">{{RELCOD4}}</td>
+          <td align="center" style="border-bottom:1px dotted #000;">{{USERNM4}}</td>
+          <td colspan="2" align="center" style="border-bottom:1px dotted #000;">{{BASGOJ4}}</td>
+          <td align="center"  style="border-bottom:1px dotted #000;">{{OLDGOJ4}}</td>
+          <td align="center"  style="border-bottom:1px dotted #000;">{{BRGONG4}}</td>
+          <td align="center"  style="border-bottom:1px dotted #000;">국세청</td>
+          <td align="right"  style="border-bottom:1px dotted #000;font-size:100%;">{{BOHM414}}</td>
+          <td align="right"  style="border-bottom:1px dotted #000;font-size:100%;">{{BOHM514}}</td>
+          <td align="right"  style="border-bottom:1px dotted #000;font-size:100%;">{{BOHM114}}</td>
+          <td align="right"  style="border-bottom:1px dotted #000;font-size:100%;">{{BOHM214}}</td>
+          <td align="right"  style="border-bottom:1px dotted #000;font-size:100%;">{{MEDAMT14}}</td>
+          <td align="right"  style="border-bottom:1px dotted #000;font-size:100%;">{{MEDAMT34}}</td>
+          <td align="right"  style="border-bottom:1px dotted #000;font-size:100%;">{{MEDAMT54}}</td>
+          <td align="right"  style="border-bottom:1px dotted #000;font-size:100%;">{{EDUAMT14}}</td>
+          <td align="right"  style="border-bottom:1px dotted #000;font-size:100%;">{{EDUAMT34}}</td>
+        </tr>
+        <tr>
+          <td align="center" style="border-top:1px dotted #000;">{{NATGBN4}}</td>
+          <td align="center" style="border-top:1px dotted #000;font-size:100%;">{{JUMINO4}}</td>
+          <td align="center" style="border-top:1px dotted #000;background:#eee">{{WOMGOJ4}}</td>
+          <td align="center" style="border-top:1px dotted #000;background:#eee">{{SNGGOJ4}}</td>
+          <td align="center" style="border-top:1px dotted #000;">{{HANGOJ4}}</td>
+          <td align="center" style="border-top:1px dotted #000;">{{MORGOJ4}}</td>
+          <td align="center" style="border-top:1px dotted #000;">기타</td>
+          <td align="right" style="border-top:1px dotted #000;font-size:100%;">{{BOHM424}}</td>
+          <td align="right" style="border-top:1px dotted #000;font-size:100%;">{{BOHM524}}</td>
+          <td align="right" style="border-top:1px dotted #000;font-size:100%;">{{BOHM124}}</td>
+          <td align="right" style="border-top:1px dotted #000;font-size:100%;">{{BOHM224}}</td>
+          <td align="right" style="border-top:1px dotted #000;font-size:100%;">{{MEDAMT24}}</td>
+          <td align="right" style="border-top:1px dotted #000;font-size:100%;">{{MEDAMT44}}</td>
+          <td align="right" style="border-top:1px dotted #000;font-size:100%;">{{MEDAMT64}}</td>
+          <td align="right" style="border-top:1px dotted #000;font-size:100%;">{{EDUAMT24}}</td>
+          <td align="right" style="border-top:1px dotted #000;font-size:100%;">{{EDUAMT44}}</td>
+        </tr>
+        <tr >
+          <td align="center" style="border-bottom:1px dotted #000;">{{RELCOD5}}</td>
+          <td align="center" style="border-bottom:1px dotted #000;">{{USERNM5}}</td>
+          <td colspan="2" align="center" style="border-bottom:1px dotted #000;">{{BASGOJ5}}</td>
+          <td align="center"  style="border-bottom:1px dotted #000;">{{OLDGOJ5}}</td>
+          <td align="center"  style="border-bottom:1px dotted #000;">{{BRGONG5}}</td>
+          <td align="center"  style="border-bottom:1px dotted #000;">국세청</td>
+          <td align="right"  style="border-bottom:1px dotted #000;font-size:100%;">{{BOHM415}}</td>
+          <td align="right"  style="border-bottom:1px dotted #000;font-size:100%;">{{BOHM515}}</td>
+          <td align="right"  style="border-bottom:1px dotted #000;font-size:100%;">{{BOHM115}}</td>
+          <td align="right"  style="border-bottom:1px dotted #000;font-size:100%;">{{BOHM215}}</td>
+          <td align="right"  style="border-bottom:1px dotted #000;font-size:100%;">{{MEDAMT15}}</td>
+          <td align="right"  style="border-bottom:1px dotted #000;font-size:100%;">{{MEDAMT35}}</td>
+          <td align="right"  style="border-bottom:1px dotted #000;font-size:100%;">{{MEDAMT55}}</td>
+          <td align="right"  style="border-bottom:1px dotted #000;font-size:100%;">{{EDUAMT15}}</td>
+          <td align="right"  style="border-bottom:1px dotted #000;font-size:100%;">{{EDUAMT35}}</td>
+        </tr>
+        <tr>
+          <td align="center" style="border-top:1px dotted #000;">{{NATGBN5}}</td>
+          <td align="center" style="border-top:1px dotted #000;font-size:100%;">{{JUMINO5}}</td>
+          <td align="center" style="border-top:1px dotted #000;background:#eee">{{WOMGOJ5}}</td>
+          <td align="center" style="border-top:1px dotted #000;background:#eee">{{SNGGOJ5}}</td>
+          <td align="center" style="border-top:1px dotted #000;">{{HANGOJ5}}</td>
+          <td align="center" style="border-top:1px dotted #000;">{{MORGOJ5}}</td>
+          <td align="center" style="border-top:1px dotted #000;">기타</td>
+          <td align="right" style="border-top:1px dotted #000;font-size:100%;">{{BOHM425}}</td>
+          <td align="right" style="border-top:1px dotted #000;font-size:100%;">{{BOHM525}}</td>
+          <td align="right" style="border-top:1px dotted #000;font-size:100%;">{{BOHM125}}</td>
+          <td align="right" style="border-top:1px dotted #000;font-size:100%;">{{BOHM225}}</td>
+          <td align="right" style="border-top:1px dotted #000;font-size:100%;">{{MEDAMT25}}</td>
+          <td align="right" style="border-top:1px dotted #000;font-size:100%;">{{MEDAMT45}}</td>
+          <td align="right" style="border-top:1px dotted #000;font-size:100%;">{{MEDAMT65}}</td>
+          <td align="right" style="border-top:1px dotted #000;font-size:100%;">{{EDUAMT25}}</td>
+          <td align="right" style="border-top:1px dotted #000;font-size:100%;">{{EDUAMT45}}</td>
+        </tr>
+        <tr >
+          <td align="center" style="border-bottom:1px dotted #000;">{{RELCOD6}}</td>
+          <td align="center" style="border-bottom:1px dotted #000;">{{USERNM6}}</td>
+          <td colspan="2" align="center" style="border-bottom:1px dotted #000;">{{BASGOJ6}}</td>
+          <td align="center"  style="border-bottom:1px dotted #000;">{{OLDGOJ6}}</td>
+          <td align="center"  style="border-bottom:1px dotted #000;">{{BRGONG6}}</td>
+          <td align="center"  style="border-bottom:1px dotted #000;">국세청</td>
+          <td align="right"  style="border-bottom:1px dotted #000;font-size:100%;">{{BOHM416}}</td>
+          <td align="right"  style="border-bottom:1px dotted #000;font-size:100%;">{{BOHM516}}</td>
+          <td align="right"  style="border-bottom:1px dotted #000;font-size:100%;">{{BOHM116}}</td>
+          <td align="right"  style="border-bottom:1px dotted #000;font-size:100%;">{{BOHM216}}</td>
+          <td align="right"  style="border-bottom:1px dotted #000;font-size:100%;">{{MEDAMT16}}</td>
+          <td align="right"  style="border-bottom:1px dotted #000;font-size:100%;">{{MEDAMT36}}</td>
+          <td align="right"  style="border-bottom:1px dotted #000;font-size:100%;">{{MEDAMT56}}</td>
+          <td align="right"  style="border-bottom:1px dotted #000;font-size:100%;">{{EDUAMT16}}</td>
+          <td align="right"  style="border-bottom:1px dotted #000;font-size:100%;">{{EDUAMT36}}</td>
+        </tr>
+        <tr>
+          <td align="center" style="border-top:1px dotted #000;">{{NATGBN6}}</td>
+          <td align="center" style="border-top:1px dotted #000;font-size:100%;">{{JUMINO6}}</td>
+          <td align="center" style="border-top:1px dotted #000;background:#eee">{{WOMGOJ6}}</td>
+          <td align="center" style="border-top:1px dotted #000;background:#eee">{{SNGGOJ6}}</td>
+          <td align="center" style="border-top:1px dotted #000;">{{HANGOJ6}}</td>
+          <td align="center" style="border-top:1px dotted #000;">{{MORGOJ6}}</td>
+          <td align="center" style="border-top:1px dotted #000;">기타</td>
+          <td align="right" style="border-top:1px dotted #000;font-size:100%;">{{BOHM426}}</td>
+          <td align="right" style="border-top:1px dotted #000;font-size:100%;">{{BOHM526}}</td>
+          <td align="right" style="border-top:1px dotted #000;font-size:100%;">{{BOHM126}}</td>
+          <td align="right" style="border-top:1px dotted #000;font-size:100%;">{{BOHM226}}</td>
+          <td align="right" style="border-top:1px dotted #000;font-size:100%;">{{MEDAMT26}}</td>
+          <td align="right" style="border-top:1px dotted #000;font-size:100%;">{{MEDAMT46}}</td>
+          <td align="right" style="border-top:1px dotted #000;font-size:100%;">{{MEDAMT66}}</td>
+          <td align="right" style="border-top:1px dotted #000;font-size:100%;">{{EDUAMT26}}</td>
+          <td align="right" style="border-top:1px dotted #000;font-size:100%;">{{EDUAMT46}}</td>
+        </tr>
+      </tbody>
+    </table>
+    <!-- 신용카드등 사용액공제 -->
+    <table class="pdataList7">
+    	<tbody>
+	    	<tr>
+	      	<td colspan="8" align="center" >각종 소득공제 · 세액공제 항목</td>
+	      </tr>
+	      <tr align="center" style="line-height:150%;">
+	      	<td rowspan="2">자료<br/>구분</td>
+	      	<td colspan="6">신용카드등 사용액공제</td>
+	      	<td rowspan="2">기부금</td>
+	      </tr>
+	      <tr align="center" style="line-height:180%;">
+	      	<td>신용카드</td>
+	      	<td>현금영수증</td>
+	      	<td>직불카드 등</td>
+	      	<td>도서공연사용분<br/>(총급여 7천만원<br/>이하자만 기재)</td>
+	      	<td>전통시장사용분</td>
+	      	<td>대중교통 이용분</td>
+	      </tr>
+	      <tr>
+	      	<td align="center" style="border-bottom:1px dotted #000;">국세청</td>
+	      	<td align="right"  style="border-bottom:1px dotted #000;font-size:100%;">{{CADSUM1}}</td>
+	      	<td align="right"  style="border-bottom:1px dotted #000;font-size:100%;">{{CAHSUM}}</td>
+	      	<td align="right"  style="border-bottom:1px dotted #000;font-size:100%;">{{JIKSUM1}}</td>
+	      	<td align="right"  style="border-bottom:1px dotted #000;font-size:100%;">{{BOKSUM1}}</td>
+	      	<td align="right"  style="border-bottom:1px dotted #000;font-size:100%;">{{MKTSUM1}}</td>
+	      	<td align="right"  style="border-bottom:1px dotted #000;font-size:100%;">{{TRNSUM1}}</td>
+	      	<td align="right"  style="border-bottom:1px dotted #000;font-size:100%;">{{DONSUM1}}</td>
+	      </tr>
+	      <tr style="border-bottom: 2px solid #000;">
+	      	<td align="center" style="border-top:1px dotted #000;">기타</td>
+	      	<td align="right"  style="border-top:1px dotted #000;font-size:100%;">{{CADSUM2}}</td>
+	      	<td align="right"  style="border-top:1px dotted #000;font-size:100%; background:#eee">&nbsp;</td>
+	      	<td align="right"  style="border-top:1px dotted #000;font-size:100%;">{{JIKSUM2}}</td>
+	      	<td align="right"  style="border-top:1px dotted #000;font-size:100%;">{{BOKSUM2}}</td>
+	      	<td align="right"  style="border-top:1px dotted #000;font-size:100%;">{{MKTSUM2}}</td>
+	      	<td align="right"  style="border-top:1px dotted #000;font-size:100%;">{{TRNSUM2}}</td>
+	      	<td align="right"  style="border-top:1px dotted #000;font-size:100%;">{{DONSUM2}}</td>
+	      </tr>               
+	      <tr>
+	      	<td align="center" style="border-bottom:1px dotted #000;">국세청</td>
+	      	<td align="right"  style="border-bottom:1px dotted #000;font-size:100%;">{{CADAMT11}}</td>
+	      	<td align="right"  style="border-bottom:1px dotted #000;font-size:100%;">{{CAHAMT11}}</td>
+	      	<td align="right"  style="border-bottom:1px dotted #000;font-size:100%;">{{JIKAMT11}}</td>
+	      	<td align="right"  style="border-bottom:1px dotted #000;font-size:100%;">{{BOKAMT11}}</td>
+	      	<td align="right"  style="border-bottom:1px dotted #000;font-size:100%;">{{MKTAMT11}}</td>
+	      	<td align="right"  style="border-bottom:1px dotted #000;font-size:100%;">{{TRNAMT11}}</td>
+	      	<td align="right"  style="border-bottom:1px dotted #000;font-size:100%;">{{DONAMT11}}</td>
+	      </tr>
+	      <tr>
+	      	<td align="center" style="border-top:1px dotted #000;">기타</td>
+	      	<td align="right"  style="border-top:1px dotted #000;font-size:100%;">{{CADAMT21}}</td>
+	      	<td align="right"  style="border-top:1px dotted #000;font-size:100%; background:#eee">&nbsp;</td>
+	      	<td align="right"  style="border-top:1px dotted #000;font-size:100%;">{{JIKAMT21}}</td>
+	      	<td align="right"  style="border-top:1px dotted #000;font-size:100%;">{{BOKAMT21}}</td>
+	      	<td align="right"  style="border-top:1px dotted #000;font-size:100%;">{{MKTAMT21}}</td>
+	      	<td align="right"  style="border-top:1px dotted #000;font-size:100%;">{{TRNAMT21}}</td>
+	      	<td align="right"  style="border-top:1px dotted #000;font-size:100%;">{{DONAMT21}}</td>
+	      </tr>               
+	      <tr>
+	      	<td align="center" style="border-bottom:1px dotted #000;">국세청</td>
+	      	<td align="right"  style="border-bottom:1px dotted #000;font-size:100%;">{{CADAMT12}}</td>
+	      	<td align="right"  style="border-bottom:1px dotted #000;font-size:100%;">{{CAHAMT12}}</td>
+	      	<td align="right"  style="border-bottom:1px dotted #000;font-size:100%;">{{JIKAMT12}}</td>
+	      	<td align="right"  style="border-bottom:1px dotted #000;font-size:100%;">{{BOKAMT12}}</td>
+	      	<td align="right"  style="border-bottom:1px dotted #000;font-size:100%;">{{MKTAMT12}}</td>
+	      	<td align="right"  style="border-bottom:1px dotted #000;font-size:100%;">{{TRNAMT12}}</td>
+	      	<td align="right"  style="border-bottom:1px dotted #000;font-size:100%;">{{DONAMT12}}</td>
+	      </tr>
+	      <tr>
+	      	<td align="center" style="border-top:1px dotted #000;">기타</td>
+	      	<td align="right"  style="border-top:1px dotted #000;font-size:100%;">{{CADAMT22}}</td>
+	      	<td align="right"  style="border-top:1px dotted #000;font-size:100%; background:#eee">&nbsp;</td>
+	      	<td align="right"  style="border-top:1px dotted #000;font-size:100%;">{{JIKAMT22}}</td>
+	      	<td align="right"  style="border-top:1px dotted #000;font-size:100%;">{{BOKAMT22}}</td>
+	      	<td align="right"  style="border-top:1px dotted #000;font-size:100%;">{{MKTAMT22}}</td>
+	      	<td align="right"  style="border-top:1px dotted #000;font-size:100%;">{{TRNAMT22}}</td>
+	      	<td align="right"  style="border-top:1px dotted #000;font-size:100%;">{{DONAMT22}}</td>
+	      </tr>               
+	      <tr>
+	      	<td align="center" style="border-bottom:1px dotted #000;">국세청</td>
+	      	<td align="right"  style="border-bottom:1px dotted #000;font-size:100%;">{{CADAMT13}}</td>
+	      	<td align="right"  style="border-bottom:1px dotted #000;font-size:100%;">{{CAHAMT13}}</td>
+	      	<td align="right"  style="border-bottom:1px dotted #000;font-size:100%;">{{JIKAMT13}}</td>
+	      	<td align="right"  style="border-bottom:1px dotted #000;font-size:100%;">{{BOKAMT13}}</td>
+	      	<td align="right"  style="border-bottom:1px dotted #000;font-size:100%;">{{MKTAMT13}}</td>
+	      	<td align="right"  style="border-bottom:1px dotted #000;font-size:100%;">{{TRNAMT13}}</td>
+	      	<td align="right"  style="border-bottom:1px dotted #000;font-size:100%;">{{DONAMT13}}</td>
+	      </tr>
+	      <tr>
+	      	<td align="center" style="border-top:1px dotted #000;">기타</td>
+	      	<td align="right"  style="border-top:1px dotted #000;font-size:100%;">{{CADAMT23}}</td>
+	      	<td align="right"  style="border-top:1px dotted #000;font-size:100%; background:#eee">&nbsp;</td>
+	      	<td align="right"  style="border-top:1px dotted #000;font-size:100%;">{{JIKAMT23}}</td>
+	      	<td align="right"  style="border-top:1px dotted #000;font-size:100%;">{{BOKAMT23}}</td>
+	      	<td align="right"  style="border-top:1px dotted #000;font-size:100%;">{{MKTAMT23}}</td>
+	      	<td align="right"  style="border-top:1px dotted #000;font-size:100%;">{{TRNAMT23}}</td>
+	      	<td align="right"  style="border-top:1px dotted #000;font-size:100%;">{{DONAMT23}}</td>
+	      </tr>               
+	      <tr>
+	      	<td align="center" style="border-bottom:1px dotted #000;">국세청</td>
+	      	<td align="right"  style="border-bottom:1px dotted #000;font-size:100%;">{{CADAMT14}}</td>
+	      	<td align="right"  style="border-bottom:1px dotted #000;font-size:100%;">{{CAHAMT14}}</td>
+	      	<td align="right"  style="border-bottom:1px dotted #000;font-size:100%;">{{JIKAMT14}}</td>
+	      	<td align="right"  style="border-bottom:1px dotted #000;font-size:100%;">{{BOKAMT14}}</td>
+	      	<td align="right"  style="border-bottom:1px dotted #000;font-size:100%;">{{MKTAMT14}}</td>
+	      	<td align="right"  style="border-bottom:1px dotted #000;font-size:100%;">{{TRNAMT14}}</td>
+	      	<td align="right"  style="border-bottom:1px dotted #000;font-size:100%;">{{DONAMT14}}</td>
+	      </tr>
+	      <tr>
+	      	<td align="center" style="border-top:1px dotted #000;">기타</td>
+	      	<td align="right"  style="border-top:1px dotted #000;font-size:100%;">{{CADAMT24}}</td>
+	      	<td align="right"  style="border-top:1px dotted #000;font-size:100%; background:#eee">&nbsp;</td>
+	      	<td align="right"  style="border-top:1px dotted #000;font-size:100%;">{{JIKAMT24}}</td>
+	      	<td align="right"  style="border-top:1px dotted #000;font-size:100%;">{{BOKAMT24}}</td>
+	      	<td align="right"  style="border-top:1px dotted #000;font-size:100%;">{{MKTAMT24}}</td>
+	      	<td align="right"  style="border-top:1px dotted #000;font-size:100%;">{{TRNAMT24}}</td>
+	      	<td align="right"  style="border-top:1px dotted #000;font-size:100%;">{{DONAMT24}}</td>
+	      </tr>               
+	      <tr>
+	      	<td align="center" style="border-bottom:1px dotted #000;">국세청</td>
+	      	<td align="right"  style="border-bottom:1px dotted #000;font-size:100%;">{{CADAMT15}}</td>
+	      	<td align="right"  style="border-bottom:1px dotted #000;font-size:100%;">{{CAHAMT15}}</td>
+	      	<td align="right"  style="border-bottom:1px dotted #000;font-size:100%;">{{JIKAMT15}}</td>
+	      	<td align="right"  style="border-bottom:1px dotted #000;font-size:100%;">{{BOKAMT15}}</td>
+	      	<td align="right"  style="border-bottom:1px dotted #000;font-size:100%;">{{MKTAMT15}}</td>
+	      	<td align="right"  style="border-bottom:1px dotted #000;font-size:100%;">{{TRNAMT15}}</td>
+	      	<td align="right"  style="border-bottom:1px dotted #000;font-size:100%;">{{DONAMT15}}</td>
+	      </tr>
+	      <tr>
+	      	<td align="center" style="border-top:1px dotted #000;">기타</td>
+	      	<td align="right"  style="border-top:1px dotted #000;font-size:100%;">{{CADAMT25}}</td>
+	      	<td align="right"  style="border-top:1px dotted #000;font-size:100%; background:#eee">&nbsp;</td>
+	      	<td align="right"  style="border-top:1px dotted #000;font-size:100%;">{{JIKAMT25}}</td>
+	      	<td align="right"  style="border-top:1px dotted #000;font-size:100%;">{{BOKAMT25}}</td>
+	      	<td align="right"  style="border-top:1px dotted #000;font-size:100%;">{{MKTAMT25}}</td>
+	      	<td align="right"  style="border-top:1px dotted #000;font-size:100%;">{{TRNAMT25}}</td>
+	      	<td align="right"  style="border-top:1px dotted #000;font-size:100%;">{{DONAMT25}}</td>
+	      </tr>               
+	      <tr>
+	      	<td align="center" style="border-bottom:1px dotted #000;">국세청</td>
+	      	<td align="right"  style="border-bottom:1px dotted #000;font-size:100%;">{{CADAMT16}}</td>
+	      	<td align="right"  style="border-bottom:1px dotted #000;font-size:100%;">{{CAHAMT16}}</td>
+	      	<td align="right"  style="border-bottom:1px dotted #000;font-size:100%;">{{JIKAMT16}}</td>
+	      	<td align="right"  style="border-bottom:1px dotted #000;font-size:100%;">{{BOKAMT16}}</td>
+	      	<td align="right"  style="border-bottom:1px dotted #000;font-size:100%;">{{MKTAMT16}}</td>
+	      	<td align="right"  style="border-bottom:1px dotted #000;font-size:100%;">{{TRNAMT16}}</td>
+	      	<td align="right"  style="border-bottom:1px dotted #000;font-size:100%;">{{DONAMT16}}</td>
+	      </tr>
+	      <tr>
+	      	<td align="center" style="border-top:1px dotted #000;">기타</td>
+	      	<td align="right"  style="border-top:1px dotted #000;font-size:100%;">{{CADAMT26}}</td>
+	      	<td align="right"  style="border-top:1px dotted #000;font-size:100%; background:#eee">&nbsp;</td>
+	      	<td align="right"  style="border-top:1px dotted #000;font-size:100%;">{{JIKAMT26}}</td>
+	      	<td align="right"  style="border-top:1px dotted #000;font-size:100%;">{{BOKAMT26}}</td>
+	      	<td align="right"  style="border-top:1px dotted #000;font-size:100%;">{{MKTAMT26}}</td>
+	      	<td align="right"  style="border-top:1px dotted #000;font-size:100%;">{{TRNAMT26}}</td>
+	      	<td align="right"  style="border-top:1px dotted #000;font-size:100%;">{{DONAMT26}}</td>
+	      </tr>               
+               
+    	</tbody>              
+    </table>
+  </div>
+</div>
+<!--원천영수증 3 PAGE END-->
+<div id="fourPage_end" style='page-break-before:always;height:0; line-height:0;'></div>
+<!--원천영수증 4 PAGE START-->
+<div id="fourPage" class="wrapper" style="margin:100px auto;width:1000px;height:1450px; border:0px dotted #000;position:relative;" >
+  <div style="position:absolute; left:931px; top:21px; width:69px; text-align:left; vertical-align:bottom; height:20px; line-height:20px; font-size:14px;text-align:right;">(제3쪽)</div>
+  <div style="width:1000px; border:0px solid black; position:absolute; top:43px; left:0px;">
+    <table class="pdataList7">
+      <colgroup>
+      <col width="30"/>
+      <col width="90"/>
+      <col width="20"/>
+      <col width="20"/>
+      <col width="30"/>
+      <col width="40"/>
+      <col width="50"/>
+      <col width="50"/>
+      <col width="50"/>
+      <col width="50"/>
+      <col width="63"/>
+      <col width="63"/>
+      <col width="63"/>
+      <col width="63"/>
+      <col width="63"/>
+      <col width="53"/>
+      </colgroup>
+      <tbody>
+        <tr>
+          <td colspan="16" align="left" style="line-height:150%;font-size:150%"><img src="../img/num_68.gif" width="15" height="15"  style="vertical-align:middle;"/> 소득공제 명세(인적공제항목은 해당란에 &quot;○&quot; 표시(장애인 해당시 해당코드를 기재)를 하며, 각종 소득공제 항목은 공제를 위하여<br />
+            실제 지출한 금액을 적습니다)</td>
+        </tr>
+        <tr>
+          <td colspan="6" align="center">인적공제 항목</td>
+          <td colspan="10" align="center" >각종 소득공제.세액공제 항목</td>
+        </tr>
+        <tr>
+          <td align="center" style="line-height:18px;height:45px;">관계<br />
+            코드</td>
+          <td align="center" >성  명</td>
+          <td colspan="2" align="center" style="line-height:18px;">기본<br />
+            공제</td>
+          <td align="center" style="line-height:18px;">경로<br />
+            우대<br /></td>
+          <td align="center" style="line-height:18px;">출산<br />
+            입양<br /></td>
+          <td rowspan="2" align="center" style="line-height:18px;">자료<br />
+            구분<br /></td>
+          <td colspan="4" align="center" >보험료</td>
+          <td colspan="3" align="center" >의료비</td>
+          <td colspan="2" align="center" >교육비</td>
+        </tr>
+        <tr>
+          <td align="center" style="line-height:18px;height:70px;">내·<br />
+            외<br />
+            국인</td>
+          <td align="center" >주민등록번호</td>
+          <td align="center" style="line-height:18px;">부<br />
+            녀<br />
+            자</td>
+          <td align="center" style="line-height:18px;">한<br />
+            부<br />
+            모</td>
+          <td align="center" style="line-height:18px;">장<br />
+            애<br />
+            인</td>
+          <td align="center" style="line-height:18px;">자녀</td>
+          <td align="center" style="line-height:18px;">건강</td>
+          <td align="center" >고용</td>
+          <td align="center" >보장성</td>
+          <td align="center" >장애인<br/>전용<br/>보장성</td>
+          <td align="center" >일반</td>
+          <td align="center" >난임</td>
+          <td align="center" >장애인·<br/>건강보험<br/>산정특례자</td>
+          <td align="center" >일반</td>
+          <td align="center" >장애인<br/>특수교육</td>
+        </tr>
+        <tr >
+          <td colspan="2" rowspan="2" align="center" style="font-size:100%;">인적공제 항목에<br />
+            해당하는 인원수를 기재<br />
+            <br />
+            (자녀&nbsp; 명)</td>
+          <td colspan="2" align="center" style="border-bottom:1px dotted #000;"></td>
+          <td align="center"  style="border-bottom:1px dotted #000;"></td>
+          <td align="center"  style="border-bottom:1px dotted #000;"></td>
+          <td align="center"  style="border-bottom:1px dotted #000;">국세청</td>
+          <td align="right"  style="border-bottom:1px dotted #000;font-size:100%;"></td>
+          <td align="right"  style="border-bottom:1px dotted #000;font-size:100%;"></td>
+          <td align="right"  style="border-bottom:1px dotted #000;font-size:100%;"></td>
+          <td align="right"  style="border-bottom:1px dotted #000;font-size:100%;"></td>
+          <td align="right"  style="border-bottom:1px dotted #000;font-size:100%;"></td>
+          <td align="right"  style="border-bottom:1px dotted #000;font-size:100%;"></td>
+          <td align="right"  style="border-bottom:1px dotted #000;font-size:100%;"></td>
+          <td align="right"  style="border-bottom:1px dotted #000;font-size:100%;"></td>
+          <td align="right"  style="border-bottom:1px dotted #000;font-size:100%;"></td>
+        </tr>
+        <tr>
+          <td align="center" style="border-top:1px dotted #000;"></td>
+          <td align="center" style="border-top:1px dotted #000;"></td>
+          <td align="center" style="border-top:1px dotted #000;"></td>
+          <td align="center" style="border-top:1px dotted #000;"></td>
+          <td align="center" style="border-top:1px dotted #000;">기타</td>
+          <td align="right" style="border-top:1px dotted #000;font-size:100%;"></td>
+          <td align="right" style="border-top:1px dotted #000;font-size:100%;"></td>
+          <td align="right" style="border-top:1px dotted #000;font-size:100%;"></td>
+          <td align="right" style="border-top:1px dotted #000;font-size:100%;"></td>
+          <td align="right" style="border-top:1px dotted #000;font-size:100%;"></td>
+          <td align="right" style="border-top:1px dotted #000;font-size:100%;"></td>
+          <td align="right" style="border-top:1px dotted #000;font-size:100%;"></td>
+          <td align="right" style="border-top:1px dotted #000;font-size:100%;"></td>
+          <td align="right" style="border-top:1px dotted #000;font-size:100%;"></td>
+        </tr>
+        <tr >
+          <td align="center" style="border-bottom:1px dotted #000;">{{RELCOD7}}</td>
+          <td align="center" style="border-bottom:1px dotted #000;">{{USERNM7}}</td>
+          <td colspan="2" align="center" style="border-bottom:1px dotted #000;">{{BASGOJ7}}</td>
+          <td align="center"  style="border-bottom:1px dotted #000;">{{OLDGOJ7}}</td>
+          <td align="center"  style="border-bottom:1px dotted #000;">{{BRGONG7}}</td>
+          <td align="center"  style="border-bottom:1px dotted #000;">국세청</td>
+          <td align="right"  style="border-bottom:1px dotted #000;font-size:100%;">{{BOHM417}}</td>
+          <td align="right"  style="border-bottom:1px dotted #000;font-size:100%;">{{BOHM517}}</td>
+          <td align="right"  style="border-bottom:1px dotted #000;font-size:100%;">{{BOHM117}}</td>
+          <td align="right"  style="border-bottom:1px dotted #000;font-size:100%;">{{BOHM217}}</td>
+          <td align="right"  style="border-bottom:1px dotted #000;font-size:100%;">{{MEDAMT17}}</td>
+          <td align="right"  style="border-bottom:1px dotted #000;font-size:100%;">{{MEDAMT37}}</td>
+          <td align="right"  style="border-bottom:1px dotted #000;font-size:100%;">{{MEDAMT57}}</td>
+          <td align="right"  style="border-bottom:1px dotted #000;font-size:100%;">{{EDUAMT17}}</td>
+          <td align="right"  style="border-bottom:1px dotted #000;font-size:100%;">{{EDUAMT37}}</td>
+        </tr>
+        <tr>
+          <td align="center" style="border-top:1px dotted #000;">{{NATGBN7}}</td>
+          <td align="center" style="border-top:1px dotted #000; font-size:100%;">{{JUMINO7}}</td>
+          <td align="center" style="border-top:1px dotted #000;background:#eee">{{WOMGOJ7}}</td>
+          <td align="center" style="border-top:1px dotted #000;background:#eee">{{SNGGOJ7}}</td>
+          <td align="center" style="border-top:1px dotted #000;">{{HANGOJ7}}</td>
+          <td align="center" style="border-top:1px dotted #000;">{{MORGOJ7}}</td>
+          <td align="center" style="border-top:1px dotted #000;">기타</td>
+          <td align="right" style="border-top:1px dotted #000;font-size:100%;">{{BOHM427}}</td>
+          <td align="right" style="border-top:1px dotted #000;font-size:100%;">{{BOHM527}}</td>
+          <td align="right" style="border-top:1px dotted #000;font-size:100%;">{{BOHM127}}</td>
+          <td align="right" style="border-top:1px dotted #000;font-size:100%;">{{BOHM227}}</td>
+          <td align="right" style="border-top:1px dotted #000;font-size:100%;">{{MEDAMT27}}</td>
+          <td align="right" style="border-top:1px dotted #000;font-size:100%;">{{MEDAMT47}}</td>
+          <td align="right" style="border-top:1px dotted #000;font-size:100%;">{{MEDAMT67}}</td>
+          <td align="right" style="border-top:1px dotted #000;font-size:100%;">{{EDUAMT27}}</td>
+          <td align="right" style="border-top:1px dotted #000;font-size:100%;">{{EDUAMT47}}</td>
+        </tr>
+        <tr >
+          <td align="center" style="border-bottom:1px dotted #000;">{{RELCOD8}}</td>
+          <td align="center" style="border-bottom:1px dotted #000;">{{USERNM8}}</td>
+          <td colspan="2" align="center" style="border-bottom:1px dotted #000;">{{BASGOJ8}}</td>
+          <td align="center"  style="border-bottom:1px dotted #000;">{{OLDGOJ8}}</td>
+          <td align="center"  style="border-bottom:1px dotted #000;">{{BRGONG8}}</td>
+          <td align="center"  style="border-bottom:1px dotted #000;">국세청</td>
+          <td align="right"  style="border-bottom:1px dotted #000;font-size:100%;">{{BOHM418}}</td>
+          <td align="right"  style="border-bottom:1px dotted #000;font-size:100%;">{{BOHM518}}</td>
+          <td align="right"  style="border-bottom:1px dotted #000;font-size:100%;">{{BOHM118}}</td>
+          <td align="right"  style="border-bottom:1px dotted #000;font-size:100%;">{{BOHM218}}</td>
+          <td align="right"  style="border-bottom:1px dotted #000;font-size:100%;">{{MEDAMT18}}</td>
+          <td align="right"  style="border-bottom:1px dotted #000;font-size:100%;">{{MEDAMT38}}</td>
+          <td align="right"  style="border-bottom:1px dotted #000;font-size:100%;">{{MEDAMT58}}</td>
+          <td align="right"  style="border-bottom:1px dotted #000;font-size:100%;">{{EDUAMT18}}</td>
+          <td align="right"  style="border-bottom:1px dotted #000;font-size:100%;">{{EDUAMT38}}</td>
+        </tr>
+        <tr>
+          <td align="center" style="border-top:1px dotted #000;">{{NATGBN8}}</td>
+          <td align="center" style="border-top:1px dotted #000; font-size:100%;">{{JUMINO8}}</td>
+          <td align="center" style="border-top:1px dotted #000;background:#eee">{{WOMGOJ8}}</td>
+          <td align="center" style="border-top:1px dotted #000;background:#eee">{{SNGGOJ8}}</td>
+          <td align="center" style="border-top:1px dotted #000;">{{HANGOJ8}}</td>
+          <td align="center" style="border-top:1px dotted #000;">{{MORGOJ8}}</td>
+          <td align="center" style="border-top:1px dotted #000;">기타</td>
+          <td align="right" style="border-top:1px dotted #000;font-size:100%;">{{BOHM428}}</td>
+          <td align="right" style="border-top:1px dotted #000;font-size:100%;">{{BOHM528}}</td>
+          <td align="right" style="border-top:1px dotted #000;font-size:100%;">{{BOHM128}}</td>
+          <td align="right" style="border-top:1px dotted #000;font-size:100%;">{{BOHM228}}</td>
+          <td align="right" style="border-top:1px dotted #000;font-size:100%;">{{MEDAMT28}}</td>
+          <td align="right" style="border-top:1px dotted #000;font-size:100%;">{{MEDAMT48}}</td>
+          <td align="right" style="border-top:1px dotted #000;font-size:100%;">{{MEDAMT68}}</td>
+          <td align="right" style="border-top:1px dotted #000;font-size:100%;">{{EDUAMT28}}</td>
+          <td align="right" style="border-top:1px dotted #000;font-size:100%;">{{EDUAMT48}}</td>
+        </tr>
+        <tr >
+          <td align="center" style="border-bottom:1px dotted #000;">{{RELCOD9}}</td>
+          <td align="center" style="border-bottom:1px dotted #000;">{{USERNM9}}</td>
+          <td colspan="2" align="center" style="border-bottom:1px dotted #000;">{{BASGOJ9}}</td>
+          <td align="center"  style="border-bottom:1px dotted #000;">{{OLDGOJ9}}</td>
+          <td align="center"  style="border-bottom:1px dotted #000;">{{BRGONG9}}</td>
+          <td align="center"  style="border-bottom:1px dotted #000;">국세청</td>
+          <td align="right"  style="border-bottom:1px dotted #000;font-size:100%;">{{BOHM419}}</td>
+          <td align="right"  style="border-bottom:1px dotted #000;font-size:100%;">{{BOHM519}}</td>
+          <td align="right"  style="border-bottom:1px dotted #000;font-size:100%;">{{BOHM119}}</td>
+          <td align="right"  style="border-bottom:1px dotted #000;font-size:100%;">{{BOHM219}}</td>
+          <td align="right"  style="border-bottom:1px dotted #000;font-size:100%;">{{MEDAMT19}}</td>
+          <td align="right"  style="border-bottom:1px dotted #000;font-size:100%;">{{MEDAMT39}}</td>
+          <td align="right"  style="border-bottom:1px dotted #000;font-size:100%;">{{MEDAMT59}}</td>
+          <td align="right"  style="border-bottom:1px dotted #000;font-size:100%;">{{EDUAMT19}}</td>
+          <td align="right"  style="border-bottom:1px dotted #000;font-size:100%;">{{EDUAMT39}}</td>
+        </tr>
+        <tr>
+          <td align="center" style="border-top:1px dotted #000;">{{NATGBN9}}</td>
+          <td align="center" style="border-top:1px dotted #000;font-size:100%;">{{JUMINO9}}</td>
+          <td align="center" style="border-top:1px dotted #000;background:#eee">{{WOMGOJ9}}</td>
+          <td align="center" style="border-top:1px dotted #000;background:#eee">{{SNGGOJ9}}</td>
+          <td align="center" style="border-top:1px dotted #000;">{{HANGOJ9}}</td>
+          <td align="center" style="border-top:1px dotted #000;">{{MORGOJ9}}</td>
+          <td align="center" style="border-top:1px dotted #000;">기타</td>
+          <td align="right" style="border-top:1px dotted #000;font-size:100%;">{{BOHM429}}</td>
+          <td align="right" style="border-top:1px dotted #000;font-size:100%;">{{BOHM529}}</td>
+          <td align="right" style="border-top:1px dotted #000;font-size:100%;">{{BOHM129}}</td>
+          <td align="right" style="border-top:1px dotted #000;font-size:100%;">{{BOHM229}}</td>
+          <td align="right" style="border-top:1px dotted #000;font-size:100%;">{{MEDAMT29}}</td>
+          <td align="right" style="border-top:1px dotted #000;font-size:100%;">{{MEDAMT49}}</td>
+          <td align="right" style="border-top:1px dotted #000;font-size:100%;">{{MEDAMT69}}</td>
+          <td align="right" style="border-top:1px dotted #000;font-size:100%;">{{EDUAMT29}}</td>
+          <td align="right" style="border-top:1px dotted #000;font-size:100%;">{{EDUAMT49}}</td>
+        </tr>
+        <tr >
+          <td align="center" style="border-bottom:1px dotted #000;">{{RELCOD10}}</td>
+          <td align="center" style="border-bottom:1px dotted #000;">{{USERNM10}}</td>
+          <td colspan="2" align="center" style="border-bottom:1px dotted #000;">{{BASGOJ10}}</td>
+          <td align="center"  style="border-bottom:1px dotted #000;">{{OLDGOJ10}}</td>
+          <td align="center"  style="border-bottom:1px dotted #000;">{{BRGONG10}}</td>
+          <td align="center"  style="border-bottom:1px dotted #000;">국세청</td>
+          <td align="right"  style="border-bottom:1px dotted #000;font-size:100%;">{{BOHM4110}}</td>
+          <td align="right"  style="border-bottom:1px dotted #000;font-size:100%;">{{BOHM5110}}</td>
+          <td align="right"  style="border-bottom:1px dotted #000;font-size:100%;">{{BOHM1110}}</td>
+          <td align="right"  style="border-bottom:1px dotted #000;font-size:100%;">{{BOHM2110}}</td>
+          <td align="right"  style="border-bottom:1px dotted #000;font-size:100%;">{{MEDAMT110}}</td>
+          <td align="right"  style="border-bottom:1px dotted #000;font-size:100%;">{{MEDAMT310}}</td>
+          <td align="right"  style="border-bottom:1px dotted #000;font-size:100%;">{{MEDAMT510}}</td>
+          <td align="right"  style="border-bottom:1px dotted #000;font-size:100%;">{{EDUAMT110}}</td>
+          <td align="right"  style="border-bottom:1px dotted #000;font-size:100%;">{{EDUAMT310}}</td>
+        </tr>
+        <tr>
+          <td align="center" style="border-top:1px dotted #000;">{{NATGBN10}}</td>
+          <td align="center" style="border-top:1px dotted #000;font-size:100%;">{{JUMINO10}}</td>
+          <td align="center" style="border-top:1px dotted #000;background:#eee">{{WOMGOJ10}}</td>
+          <td align="center" style="border-top:1px dotted #000;background:#eee">{{SNGGOJ10}}</td>
+          <td align="center" style="border-top:1px dotted #000;">{{HANGOJ10}}</td>
+          <td align="center" style="border-top:1px dotted #000;">{{MORGOJ10}}</td>
+          <td align="center" style="border-top:1px dotted #000;">기타</td>
+          <td align="right" style="border-top:1px dotted #000;font-size:100%;">{{BOHM4210}}</td>
+          <td align="right" style="border-top:1px dotted #000;font-size:100%;">{{BOHM5210}}</td>
+          <td align="right" style="border-top:1px dotted #000;font-size:100%;">{{BOHM1210}}</td>
+          <td align="right" style="border-top:1px dotted #000;font-size:100%;">{{BOHM2210}}</td>
+          <td align="right" style="border-top:1px dotted #000;font-size:100%;">{{MEDAMT210}}</td>
+          <td align="right" style="border-top:1px dotted #000;font-size:100%;">{{MEDAMT410}}</td>
+          <td align="right" style="border-top:1px dotted #000;font-size:100%;">{{MEDAMT610}}</td>
+          <td align="right" style="border-top:1px dotted #000;font-size:100%;">{{EDUAMT210}}</td>
+          <td align="right" style="border-top:1px dotted #000;font-size:100%;">{{EDUAMT410}}</td>
+        </tr>
+        <tr >
+          <td align="center" style="border-bottom:1px dotted #000;">{{RELCOD11}}</td>
+          <td align="center" style="border-bottom:1px dotted #000;">{{USERNM11}}</td>
+          <td colspan="2" align="center" style="border-bottom:1px dotted #000;">{{BASGOJ11}}</td>
+          <td align="center"  style="border-bottom:1px dotted #000;">{{OLDGOJ11}}</td>
+          <td align="center"  style="border-bottom:1px dotted #000;">{{BRGONG11}}</td>
+          <td align="center"  style="border-bottom:1px dotted #000;">국세청</td>
+          <td align="right"  style="border-bottom:1px dotted #000;font-size:100%;">{{BOHM4111}}</td>
+          <td align="right"  style="border-bottom:1px dotted #000;font-size:100%;">{{BOHM5111}}</td>
+          <td align="right"  style="border-bottom:1px dotted #000;font-size:100%;">{{BOHM1111}}</td>
+          <td align="right"  style="border-bottom:1px dotted #000;font-size:100%;">{{BOHM2111}}</td>
+          <td align="right"  style="border-bottom:1px dotted #000;font-size:100%;">{{MEDAMT111}}</td>
+          <td align="right"  style="border-bottom:1px dotted #000;font-size:100%;">{{MEDAMT311}}</td>
+          <td align="right"  style="border-bottom:1px dotted #000;font-size:100%;">{{MEDAMT511}}</td>
+          <td align="right"  style="border-bottom:1px dotted #000;font-size:100%;">{{EDUAMT111}}</td>
+          <td align="right"  style="border-bottom:1px dotted #000;font-size:100%;">{{EDUAMT311}}</td>
+        </tr>
+        <tr>
+          <td align="center" style="border-top:1px dotted #000;">{{NATGBN11}}</td>
+          <td align="center" style="border-top:1px dotted #000;font-size:100%;">{{JUMINO11}}</td>
+          <td align="center" style="border-top:1px dotted #000;background:#eee">{{WOMGOJ11}}</td>
+          <td align="center" style="border-top:1px dotted #000;background:#eee">{{SNGGOJ11}}</td>
+          <td align="center" style="border-top:1px dotted #000;">{{HANGOJ11}}</td>
+          <td align="center" style="border-top:1px dotted #000;">{{MORGOJ11}}</td>
+          <td align="center" style="border-top:1px dotted #000;">기타</td>
+          <td align="right" style="border-top:1px dotted #000;font-size:100%;">{{BOHM4211}}</td>
+          <td align="right" style="border-top:1px dotted #000;font-size:100%;">{{BOHM5211}}</td>
+          <td align="right" style="border-top:1px dotted #000;font-size:100%;">{{BOHM1211}}</td>
+          <td align="right" style="border-top:1px dotted #000;font-size:100%;">{{BOHM2211}}</td>
+          <td align="right" style="border-top:1px dotted #000;font-size:100%;">{{MEDAMT211}}</td>
+          <td align="right" style="border-top:1px dotted #000;font-size:100%;">{{MEDAMT411}}</td>
+          <td align="right" style="border-top:1px dotted #000;font-size:100%;">{{MEDAMT611}}</td>
+          <td align="right" style="border-top:1px dotted #000;font-size:100%;">{{EDUAMT211}}</td>
+          <td align="right" style="border-top:1px dotted #000;font-size:100%;">{{EDUAMT411}}</td>
+        </tr>
+        <tr >
+          <td align="center" style="border-bottom:1px dotted #000;">{{RELCOD12}}</td>
+          <td align="center" style="border-bottom:1px dotted #000;">{{USERNM12}}</td>
+          <td colspan="2" align="center" style="border-bottom:1px dotted #000;">{{BASGOJ12}}</td>
+          <td align="center"  style="border-bottom:1px dotted #000;">{{OLDGOJ12}}</td>
+          <td align="center"  style="border-bottom:1px dotted #000;">{{BRGONG12}}</td>
+          <td align="center"  style="border-bottom:1px dotted #000;">국세청</td>
+          <td align="right"  style="border-bottom:1px dotted #000;font-size:100%;">{{BOHM4112}}</td>
+          <td align="right"  style="border-bottom:1px dotted #000;font-size:100%;">{{BOHM5112}}</td>
+          <td align="right"  style="border-bottom:1px dotted #000;font-size:100%;">{{BOHM1112}}</td>
+          <td align="right"  style="border-bottom:1px dotted #000;font-size:100%;">{{BOHM2112}}</td>
+          <td align="right"  style="border-bottom:1px dotted #000;font-size:100%;">{{MEDAMT112}}</td>
+          <td align="right"  style="border-bottom:1px dotted #000;font-size:100%;">{{MEDAMT312}}</td>
+          <td align="right"  style="border-bottom:1px dotted #000;font-size:100%;">{{MEDAMT512}}</td>
+          <td align="right"  style="border-bottom:1px dotted #000;font-size:100%;">{{EDUAMT112}}</td>
+          <td align="right"  style="border-bottom:1px dotted #000;font-size:100%;">{{EDUAMT312}}</td>
+        </tr>
+        <tr>
+          <td align="center" style="border-top:1px dotted #000;">{{NATGBN12}}</td>
+          <td align="center" style="border-top:1px dotted #000;font-size:100%;">{{JUMINO12}}</td>
+          <td align="center" style="border-top:1px dotted #000;background:#eee">{{WOMGOJ12}}</td>
+          <td align="center" style="border-top:1px dotted #000;background:#eee">{{SNGGOJ12}}</td>
+          <td align="center" style="border-top:1px dotted #000;">{{HANGOJ12}}</td>
+          <td align="center" style="border-top:1px dotted #000;">{{MORGOJ12}}</td>
+          <td align="center" style="border-top:1px dotted #000;">기타</td>
+          <td align="right" style="border-top:1px dotted #000;font-size:100%;">{{BOHM4212}}</td>
+          <td align="right" style="border-top:1px dotted #000;font-size:100%;">{{BOHM5212}}</td>
+          <td align="right" style="border-top:1px dotted #000;font-size:100%;">{{BOHM1212}}</td>
+          <td align="right" style="border-top:1px dotted #000;font-size:100%;">{{BOHM2212}}</td>
+          <td align="right" style="border-top:1px dotted #000;font-size:100%;">{{MEDAMT212}}</td>
+          <td align="right" style="border-top:1px dotted #000;font-size:100%;">{{MEDAMT412}}</td>
+          <td align="right" style="border-top:1px dotted #000;font-size:100%;">{{MEDAMT612}}</td>
+          <td align="right" style="border-top:1px dotted #000;font-size:100%;">{{EDUAMT212}}</td>
+          <td align="right" style="border-top:1px dotted #000;font-size:100%;">{{EDUAMT412}}</td>
+        </tr>
+      </tbody>
+    </table>
+    <!-- 신용카드등 사용액공제 -->
+    <table class="pdataList7">
+    	<tbody>
+	    	<tr>
+	      	<td colspan="8" align="center" >각종 소득공제 · 세액공제 항목</td>
+	      </tr>
+	      <tr align="center" style="line-height:150%;">
+	      	<td rowspan="2">자료<br/>구분</td>
+	      	<td colspan="6">신용카드등 사용액공제</td>
+	      	<td rowspan="2">기부금</td>
+	      </tr>
+	      <tr align="center" style="line-height:180%;">
+	      	<td>신용카드</td>
+	      	<td>현금영수증</td>
+	      	<td>직불카드 등</td>
+	      	<td>도서공연사용분<br/>(총급여 7천만원<br/>이하자만 기재)</td>
+	      	<td>전통시장사용분</td>
+	      	<td>대중교통 이용분</td>
+	      </tr>
+	      <tr>
+	      	<td align="center" style="border-bottom:1px dotted #000;">국세청</td>
+	      	<td align="right"  style="border-bottom:1px dotted #000;font-size:100%;"></td>
+	      	<td align="right"  style="border-bottom:1px dotted #000;font-size:100%;"></td>
+	      	<td align="right"  style="border-bottom:1px dotted #000;font-size:100%;"></td>
+	      	<td align="right"  style="border-bottom:1px dotted #000;font-size:100%;"></td>
+	      	<td align="right"  style="border-bottom:1px dotted #000;font-size:100%;"></td>
+	      	<td align="right"  style="border-bottom:1px dotted #000;font-size:100%;"></td>
+	      	<td align="right"  style="border-bottom:1px dotted #000;font-size:100%;"></td>
+	      </tr>
+	      <tr style="border-bottom: 2px solid #000;">
+	      	<td align="center" style="border-top:1px dotted #000;">기타</td>
+	      	<td align="right"  style="border-top:1px dotted #000;font-size:100%;"></td>
+	      	<td align="right"  style="border-top:1px dotted #000;font-size:100%; background:#eee">&nbsp;</td>
+	      	<td align="right"  style="border-top:1px dotted #000;font-size:100%;"></td>
+	      	<td align="right"  style="border-top:1px dotted #000;font-size:100%;"></td>
+	      	<td align="right"  style="border-top:1px dotted #000;font-size:100%;"></td>
+	      	<td align="right"  style="border-top:1px dotted #000;font-size:100%;"></td>
+	      	<td align="right"  style="border-top:1px dotted #000;font-size:100%;"></td>
+	      </tr>               
+	      <tr>
+	      	<td align="center" style="border-bottom:1px dotted #000;">국세청</td>
+	      	<td align="right"  style="border-bottom:1px dotted #000;font-size:100%;">{{CADAMT17}}</td>
+	      	<td align="right"  style="border-bottom:1px dotted #000;font-size:100%;">{{CAHAMT17}}</td>
+	      	<td align="right"  style="border-bottom:1px dotted #000;font-size:100%;">{{JIKAMT17}}</td>
+	      	<td align="right"  style="border-bottom:1px dotted #000;font-size:100%;">{{BOKAMT17}}</td>
+	      	<td align="right"  style="border-bottom:1px dotted #000;font-size:100%;">{{MKTAMT17}}</td>
+	      	<td align="right"  style="border-bottom:1px dotted #000;font-size:100%;">{{TRNAMT17}}</td>
+	      	<td align="right"  style="border-bottom:1px dotted #000;font-size:100%;">{{DONAMT17}}</td>
+	      </tr>
+	      <tr>
+	      	<td align="center" style="border-top:1px dotted #000;">기타</td>
+	      	<td align="right"  style="border-top:1px dotted #000;font-size:100%;">{{CADAMT27}}</td>
+	      	<td align="right"  style="border-top:1px dotted #000;font-size:100%; background:#eee">&nbsp;</td>
+	      	<td align="right"  style="border-top:1px dotted #000;font-size:100%;">{{JIKAMT27}}</td>
+	      	<td align="right"  style="border-top:1px dotted #000;font-size:100%;">{{BOKAMT27}}</td>
+	      	<td align="right"  style="border-top:1px dotted #000;font-size:100%;">{{MKTAMT27}}</td>
+	      	<td align="right"  style="border-top:1px dotted #000;font-size:100%;">{{TRNAMT27}}</td>
+	      	<td align="right"  style="border-top:1px dotted #000;font-size:100%;">{{DONAMT27}}</td>
+	      </tr>               
+	      <tr>
+	      	<td align="center" style="border-bottom:1px dotted #000;">국세청</td>
+	      	<td align="right"  style="border-bottom:1px dotted #000;font-size:100%;">{{CADAMT18}}</td>
+	      	<td align="right"  style="border-bottom:1px dotted #000;font-size:100%;">{{CAHAMT18}}</td>
+	      	<td align="right"  style="border-bottom:1px dotted #000;font-size:100%;">{{JIKAMT18}}</td>
+	      	<td align="right"  style="border-bottom:1px dotted #000;font-size:100%;">{{BOKAMT18}}</td>
+	      	<td align="right"  style="border-bottom:1px dotted #000;font-size:100%;">{{MKTAMT18}}</td>
+	      	<td align="right"  style="border-bottom:1px dotted #000;font-size:100%;">{{TRNAMT18}}</td>
+	      	<td align="right"  style="border-bottom:1px dotted #000;font-size:100%;">{{DONAMT18}}</td>
+	      </tr>
+	      <tr>
+	      	<td align="center" style="border-top:1px dotted #000;">기타</td>
+	      	<td align="right"  style="border-top:1px dotted #000;font-size:100%;">{{CADAMT28}}</td>
+	      	<td align="right"  style="border-top:1px dotted #000;font-size:100%; background:#eee">&nbsp;</td>
+	      	<td align="right"  style="border-top:1px dotted #000;font-size:100%;">{{JIKAMT28}}</td>
+	      	<td align="right"  style="border-top:1px dotted #000;font-size:100%;">{{BOKAMT28}}</td>
+	      	<td align="right"  style="border-top:1px dotted #000;font-size:100%;">{{MKTAMT28}}</td>
+	      	<td align="right"  style="border-top:1px dotted #000;font-size:100%;">{{TRNAMT28}}</td>
+	      	<td align="right"  style="border-top:1px dotted #000;font-size:100%;">{{DONAMT28}}</td>
+	      </tr>               
+	      <tr>
+	      	<td align="center" style="border-bottom:1px dotted #000;">국세청</td>
+	      	<td align="right"  style="border-bottom:1px dotted #000;font-size:100%;">{{CADAMT19}}</td>
+	      	<td align="right"  style="border-bottom:1px dotted #000;font-size:100%;">{{CAHAMT19}}</td>
+	      	<td align="right"  style="border-bottom:1px dotted #000;font-size:100%;">{{JIKAMT19}}</td>
+	      	<td align="right"  style="border-bottom:1px dotted #000;font-size:100%;">{{BOKAMT19}}</td>
+	      	<td align="right"  style="border-bottom:1px dotted #000;font-size:100%;">{{MKTAMT19}}</td>
+	      	<td align="right"  style="border-bottom:1px dotted #000;font-size:100%;">{{TRNAMT19}}</td>
+	      	<td align="right"  style="border-bottom:1px dotted #000;font-size:100%;">{{DONAMT19}}</td>
+	      </tr>
+	      <tr>
+	      	<td align="center" style="border-top:1px dotted #000;">기타</td>
+	      	<td align="right"  style="border-top:1px dotted #000;font-size:100%;">{{CADAMT29}}</td>
+	      	<td align="right"  style="border-top:1px dotted #000;font-size:100%; background:#eee">&nbsp;</td>
+	      	<td align="right"  style="border-top:1px dotted #000;font-size:100%;">{{JIKAMT29}}</td>
+	      	<td align="right"  style="border-top:1px dotted #000;font-size:100%;">{{BOKAMT29}}</td>
+	      	<td align="right"  style="border-top:1px dotted #000;font-size:100%;">{{MKTAMT29}}</td>
+	      	<td align="right"  style="border-top:1px dotted #000;font-size:100%;">{{TRNAMT29}}</td>
+	      	<td align="right"  style="border-top:1px dotted #000;font-size:100%;">{{DONAMT29}}</td>
+	      </tr>               
+	      <tr>
+	      	<td align="center" style="border-bottom:1px dotted #000;">국세청</td>
+	      	<td align="right"  style="border-bottom:1px dotted #000;font-size:100%;">{{CADAMT110}}</td>
+	      	<td align="right"  style="border-bottom:1px dotted #000;font-size:100%;">{{CAHAMT110}}</td>
+	      	<td align="right"  style="border-bottom:1px dotted #000;font-size:100%;">{{JIKAMT110}}</td>
+	      	<td align="right"  style="border-bottom:1px dotted #000;font-size:100%;">{{BOKAMT110}}</td>
+	      	<td align="right"  style="border-bottom:1px dotted #000;font-size:100%;">{{MKTAMT110}}</td>
+	      	<td align="right"  style="border-bottom:1px dotted #000;font-size:100%;">{{TRNAMT110}}</td>
+	      	<td align="right"  style="border-bottom:1px dotted #000;font-size:100%;">{{DONAMT110}}</td>
+	      </tr>
+	      <tr>
+	      	<td align="center" style="border-top:1px dotted #000;">기타</td>
+	      	<td align="right"  style="border-top:1px dotted #000;font-size:100%;">{{CADAMT210}}</td>
+	      	<td align="right"  style="border-top:1px dotted #000;font-size:100%; background:#eee">&nbsp;</td>
+	      	<td align="right"  style="border-top:1px dotted #000;font-size:100%;">{{JIKAMT210}}</td>
+	      	<td align="right"  style="border-top:1px dotted #000;font-size:100%;">{{BOKAMT210}}</td>
+	      	<td align="right"  style="border-top:1px dotted #000;font-size:100%;">{{MKTAMT210}}</td>
+	      	<td align="right"  style="border-top:1px dotted #000;font-size:100%;">{{TRNAMT210}}</td>
+	      	<td align="right"  style="border-top:1px dotted #000;font-size:100%;">{{DONAMT210}}</td>
+	      </tr>               
+	      <tr>
+	      	<td align="center" style="border-bottom:1px dotted #000;">국세청</td>
+	      	<td align="right"  style="border-bottom:1px dotted #000;font-size:100%;">{{CADAMT111}}</td>
+	      	<td align="right"  style="border-bottom:1px dotted #000;font-size:100%;">{{CAHAMT111}}</td>
+	      	<td align="right"  style="border-bottom:1px dotted #000;font-size:100%;">{{JIKAMT111}}</td>
+	      	<td align="right"  style="border-bottom:1px dotted #000;font-size:100%;">{{BOKAMT111}}</td>
+	      	<td align="right"  style="border-bottom:1px dotted #000;font-size:100%;">{{MKTAMT111}}</td>
+	      	<td align="right"  style="border-bottom:1px dotted #000;font-size:100%;">{{TRNAMT111}}</td>
+	      	<td align="right"  style="border-bottom:1px dotted #000;font-size:100%;">{{DONAMT111}}</td>
+	      </tr>
+	      <tr>
+	      	<td align="center" style="border-top:1px dotted #000;">기타</td>
+	      	<td align="right"  style="border-top:1px dotted #000;font-size:100%;">{{CADAMT211}}</td>
+	      	<td align="right"  style="border-top:1px dotted #000;font-size:100%; background:#eee">&nbsp;</td>
+	      	<td align="right"  style="border-top:1px dotted #000;font-size:100%;">{{JIKAMT211}}</td>
+	      	<td align="right"  style="border-top:1px dotted #000;font-size:100%;">{{BOKAMT211}}</td>
+	      	<td align="right"  style="border-top:1px dotted #000;font-size:100%;">{{MKTAMT211}}</td>
+	      	<td align="right"  style="border-top:1px dotted #000;font-size:100%;">{{TRNAMT211}}</td>
+	      	<td align="right"  style="border-top:1px dotted #000;font-size:100%;">{{DONAMT211}}</td>
+	      </tr>               
+	      <tr>
+	      	<td align="center" style="border-bottom:1px dotted #000;">국세청</td>
+	      	<td align="right"  style="border-bottom:1px dotted #000;font-size:100%;">{{CADAMT112}}</td>
+	      	<td align="right"  style="border-bottom:1px dotted #000;font-size:100%;">{{CAHAMT112}}</td>
+	      	<td align="right"  style="border-bottom:1px dotted #000;font-size:100%;">{{JIKAMT112}}</td>
+	      	<td align="right"  style="border-bottom:1px dotted #000;font-size:100%;">{{BOKAMT112}}</td>
+	      	<td align="right"  style="border-bottom:1px dotted #000;font-size:100%;">{{MKTAMT112}}</td>
+	      	<td align="right"  style="border-bottom:1px dotted #000;font-size:100%;">{{TRNAMT112}}</td>
+	      	<td align="right"  style="border-bottom:1px dotted #000;font-size:100%;">{{DONAMT112}}</td>
+	      </tr>
+	      <tr>
+	      	<td align="center" style="border-top:1px dotted #000;">기타</td>
+	      	<td align="right"  style="border-top:1px dotted #000;font-size:100%;">{{CADAMT212}}</td>
+	      	<td align="right"  style="border-top:1px dotted #000;font-size:100%; background:#eee">&nbsp;</td>
+	      	<td align="right"  style="border-top:1px dotted #000;font-size:100%;">{{JIKAMT212}}</td>
+	      	<td align="right"  style="border-top:1px dotted #000;font-size:100%;">{{BOKAMT212}}</td>
+	      	<td align="right"  style="border-top:1px dotted #000;font-size:100%;">{{MKTAMT212}}</td>
+	      	<td align="right"  style="border-top:1px dotted #000;font-size:100%;">{{TRNAMT212}}</td>
+	      	<td align="right"  style="border-top:1px dotted #000;font-size:100%;">{{DONAMT212}}</td>
+	      </tr>               
+               
+    	</tbody>              
+    </table>
+  </div>
+</div>
+<!--원천영수증 4 PAGE END-->
+<div style='page-break-before:always;height:0; line-height:0'></div>
+<!--원천영수증 5 PAGE START-->
+<br/><br/><br/><br/><br/><br/><br/>
+<div class="wrapper" style="margin:0px auto;width:1000px;height:950px; border:0px dotted #000;position:relative;" >
+	<div style="position:absolute; left:931px; top:16px; width:69px; text-align:left; vertical-align:bottom; height:20px; line-height:20px; font-size:14px;text-align:right;">(제4쪽)</div>
+  <div style="width:1000px; border:0px solid black; position:absolute; top:36px; left:0px;">
+    <table class="pdataList3">
+      <tr>
+        <td align="center" style="border-top:4px solid #000; background:#eee;">작 성 방 법</td>
+      </tr>
+    </table>
+  </div>
+  <div style="width:980px; border:0px solid black; position:absolute; top:76px; left:11px;">
+    <table class="pdataList7" >
+      <tr>
+        <td style="letter-spacing:2px;font-size:120%;line-height:170%;">「소득세법」제149조 제1호에 해당하는 납세조합이 「소득세법」제127조 제1항 제4호 각 목에 해당하는 근로소득을 연말정산하는 경우에도<br />
+          사용하며, 이경우 &#9320;근무처명 및 &#9321;사업자등록번호에는 실제 근무처의 상호 및 사업자번호를적습니다. 다만, 근무처의 사업자등록이 없는<br />
+          경우 납세조합의 사업자등록번호를 적습니다. </td>
+      </tr>
+    </table>
+  </div>
+  <div style="width:900px; border:0px solid black; position:absolute; top:160px; left:22px;">
+    <table class="pdataList8">
+      <tr>
+        <td style="border-bottom:0px hidden;">1. 거주지국과 거주지국코드는 근로소득자가 비거주자에 해당하는 경우에만 적으며, 국제표준화기구(ISO)가 정항 ISO코드 중 국명약어 및<br />
+          &nbsp;&nbsp;&nbsp;
+          국가코드를 적습니다(※ISO국가코드:국세청홈페이지→국세정보→국세조세정보→국세조세자료실에서 조회할 수 있습니다.)<br />
+          2. 근로소득자가 외국인에 해당하는 경우에는 내·외국인란에 &quot;외국인 9&quot;를 선택하고 국적 및 국적코드란에 국제표준화기구(ISO)가 정한<br />
+          &nbsp;&nbsp;&nbsp;
+          ISO코드 중 국명약어 및 국가코드를 적습니다. 해당 근로소득자가 외국인근로자 단일세율적용신청서를 제출한 경우 '외국인단일세율 적<br />
+          &nbsp;&nbsp;&nbsp;
+          용'란에 여1를 선택합니다.<br />
+          3. 원천징수의무자가 「부가가치세법」에 따른 사업자단위 과세자에 해당할 경우 ③-1에서 여1을 선택하고, ③-2에 소득자가 근무하는<br />
+          &nbsp;&nbsp;&nbsp;
+          사업장의 종사업장 일련번호를 기재합니다.<br />
+          4. 원천징수의무자는 지급일이 속하는 연도의 다음 연도 3월 10일(휴업 또는 폐업한 경우에는 휴업일 또는 폐업일이 속하는 달의 다음 다음<br />
+          &nbsp;&nbsp;&nbsp;
+          달 말일을 말합니다)까지 지급명세서를 제출하여야 합니다.<br />
+          5. I. 근무처별소득명세란은 비과세소득을 제외한 금액을 해당 항목별로 적고, II. 비과세 및 감면소득 명세서란에는 지급명세서 작성대상<br />
+          &nbsp;&nbsp;&nbsp;
+          비과세소득 및 감면대상을 해당코드별로 구분하여 적습니다. (기재할 항목이많은 경우 II. 비과세 및 감면소득 명세서란의 &#9331; 비과세소득<br />
+          &nbsp;&nbsp;&nbsp;
+          계란 및 &#9331;-1 감면세액 계에 총액만 적고, II.비과세 소득란을 별지로 작성 가능합니다.)<br />
+          6.「소득세법」제127조 제1항 제4호의 각 목에 해당하는 근로소득과 그 외 근로소득을 더하여 연말정산하는 때에는 &#9327;-`납세조합란에 각각<br />
+          &nbsp;&nbsp;&nbsp;
+          근로소득납세조합과 「소득세법」제127조 제1항 제4호 각 목에 해당하는 근로소득을 적고, 「소득세법」제150조에 따른 납세조합공제금액<br />
+          &nbsp;&nbsp;&nbsp;
+          을 <img src="../img/num_57.gif" width="15" height="15" style="vertical-align:middle;"/>납세조합공제란에 적습니다. 합병, 기업형태 변경 등으로 해당 법인이 연말정산을 하는 경우에 피합병법인과 기업형태변경전의 소<br />
+          &nbsp;&nbsp;&nbsp;
+          득은 근무처별소득공제명세 종(전)란에 별도로 적습니다.<br />
+          &nbsp;&nbsp;&nbsp;
+          또한, 동일회사 내에서 사업자등록번호가 다른 곳에서 전입 등을 한 경우 해당 법인이 연말정산을 하는 경우에 전입하기 전 지점 등에서 발<br />
+          &nbsp;&nbsp;&nbsp;
+          생한 소득은 근무처별소득공제명세 종(전)란에 별도로 적습니다.<br />
+          7. &#12881;총급여란에는 &quot;&#9327;계&quot;란의 금액을 적되, 외국인근로자로가「조세특례제한법」제18조의2 제2항에 따라 단일세율을 적용하는 경우에는<br />
+          &nbsp;&nbsp;   &quot;&#9327;계&quot;의 금액과 비과세 소득금액을 더한 금액을 적고, 이 경우 소득세와 관련한 비과세·공제·감면 및 세액공제에 관한 규정은 적용하지<br />
+          &nbsp;&nbsp;&nbsp;
+          않습니다.<br />
+          8. 종합소득 특별공제(&#12894;~&#12980;)란과 그 밖의 소득공제(&#12984;~&#12988;)란은 근로소득자공제신고서(별지 제37호 서식)의 공제액을 적습니다<br />
+          &nbsp;&nbsp;&nbsp;
+          (소득공제는 서식에서 정하는 바에 따라 순차적으로 소득공제를 적용하여 종합소득과세표준과 세액을 계산합니다.)<br/>
+          9. "연금계좌(<img src="../img/num_57.gif" width="15" height="15" style="vertical-align:middle;"/>~<img src="../img/num_59.gif" width="15" height="15" style="vertical-align:middle;"/>)"란과 
+          "특별세액공제(<img src="../img/num_60.gif" width="15" height="15" style="vertical-align:middle;"/>~<img src="../img/num_65.gif" width="15" height="15" style="vertical-align:middle;"/>)"란은
+           근로소득자 소득ㆍ세액 공제신고서(별지 제37호서식)의 공제대상금액 및<br/>
+           &nbsp;&nbsp;&nbsp;
+           세액공제액을 적습니다.
+          </td>
+      </tr>
+    </table>
+  </div>
+</div>
+<!--원천영수증 5 PAGE END-->
+<!-- IF 'forPage' -->
+<div style='page-break-before:always;height:0; line-height:0'></div>
+<!-- IF 'forPage' -->
+{{pageBreak}}
+<!-- IF 'PrintList' -->
