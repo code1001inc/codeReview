@@ -1,0 +1,7 @@
+﻿Record - http://www.delphibasics.co.uk/Article.asp?Name=Records
+
+Class - http://docwiki.embarcadero.com/RADStudio/Rio/en/Classes_and_Objects_(Delphi)
+
+Dictionary - http://docwiki.embarcadero.com/CodeExamples/Rio/en/Generics_Collections_TDictionary_(Delphi)
+
+Record <> Class - https://stackoverflow.com/a/1877775
