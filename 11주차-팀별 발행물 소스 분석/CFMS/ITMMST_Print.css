@@ -1,0 +1,49 @@
+@CHARSET "UTF-8";
+
+@media print { 
+  html, body { 
+    border:0; margin:0; padding:0; background-color: #fff; 
+  } 
+  
+  @page {
+    size:21cm 29.7cm; /*A4*/   
+    margin: 10mm 4.23mm 10mm 4.23mm;  /* 인쇄 페이지설정의 여백 */
+  }
+  
+  .page-divide {
+    page-break-before:always; height:0px; line-height:0;
+  }
+  
+  .hidden-print {
+    display: none;
+  }
+  
+  .visible-print {
+	display:block;
+  }
+}
+
+
+p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,table,th,td,form,fieldset,legend,input,textarea,button{margin:0;padding:0;-webkit-text-size-adjust:none;}
+body,input,textarea,select,table,button,code{letter-spacing:0px; font-family:"굴림체",Dotum,Helvetica,AppleGothic,Sans-serif; font-size: 12px;}
+input[type=text]::-ms-clear{display: none; }*/
+
+.body { margin: 10px; }
+
+.Title { font-size: 25px; font-weight: bold;}
+
+.datalist01			{ border-collapse:collapse; table-layout:inherit; width:58%; border: 2px solid black; position: relative; margin-left: 41%;}
+.datalist01 th		{ margin: 0; padding: 0px; border-bottom: 1px solid black;border-right: 1px solid black;height:15px; font-size:12px; text-align: center; font-weight:bold; }
+.datalist01 td		{ margin: 0; padding: 0px; font-size:12px; height:26px; border-bottom: 1px solid black; border-right: 1px solid black; text-align: center; white-space:nowrap; cursor:default; }
+
+.datalist02			{ border-collapse:collapse; table-layout:fixed; width:98%; border: 2px solid black; }
+.datalist02 th		{ margin: 0; padding: 0px; border-bottom: 1px solid black;border-right: 1px solid black;height:26px;font-size:12px; text-align: center; font-weight:bold; background-color: #E1E1E1; padding: 10px 10px 10px 10px;}
+.datalist02 td		{ margin: 0; padding: 0px; font-size:12px; height:26px; border-bottom: 1px solid black; border-right: 1px solid black; text-align: center; white-space:nowrap; cursor:default; }
+
+.datalist03			{ border-collapse:collapse; table-layout:fixed; width:98%; border: 2px solid black; }
+.datalist03 th		{ margin: 0; padding: 0px; border-bottom: 1px solid black;border-right: 1px solid black;height:26px;font-size:12px; text-align: center; font-weight:bold; background-color: #E1E1E1; padding: 8px 4px 8px 4px;}
+.datalist03 td		{ margin: 0; padding: 0px; font-size:12px; height:26px; border-bottom: 1px solid black; border-right: 1px solid black; text-align: center; white-space:nowrap; cursor:default; }
+.ReqDate { border: 1px solid black; padding: 2px 2px 2px 2px; font-size: 20px; font-family: 'Arial'; }
+
+#today{letter-spacing:0px; font-family:"굴림체",Dotum,Helvetica,AppleGothic,Sans-serif; font-size: 12px; font-weight: bold;}
+
