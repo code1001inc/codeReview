@@ -1,0 +1,28 @@
+﻿json : 가볍고 구조를 파악하기 쉬움. 
+보통 파서 및 메소드 사용 시 json.simple 쓰지만 우린 net.sf.json 씀
+
+jsonp : JSON-P, json with padding.
+동일 출처 정책을 우회하는 데이터 공유를 위한 JSON. 상속 비보안 문제로 CORS로 대체중.
+* 퍼포먼스 비교에서 쓰인 것은 JSON Processing by Oracle
+
+gson : json 구조를 띄는 데이터를 직렬, 역직렬화 해주는 라이브러리. json을 다루는 메소드들 제공.
+복잡한 유형의 Json을 Bean으로 직렬, 역직렬화 시 장점.
+
+jackson : Json 구조를 직렬, 역직렬화 해주는 라이브러리, 스프링의 기본 파서는 Jackson임.
+1. 8부터 추가된 스트림 형식으로 데이터를 분석해서 JDK1.8 위로는 성능이 더 향상됨.
+2. Tree Model : Node 형태로 데이터를 다뤄 유연성이 좋음.
+3. POJO 기반의 자바 객체들을 JSON으로 변환시킬 수 있음.
+
+FastJson : 알리바바에서 개발한 Json 프로세서, 원본 알고리즘을 사용하여 속도를 최대로 높임.
+복잡한 유형의 Bean을 Json으로 변환시킬 시 문제가 잇음.
+
+
+* 사내 웹 프로젝트 내 HashMap / json.simple / net.sf.json / gson 의 속도 비교
+
+- 속도 비교 결과1(400건) : json.simple = gson > net.sf.json > HashMap
+
+- 속도 비교 결과2(10만건) : json.simple = gson = HashMap > net.sf.json
+
+결론 : ResultSet을 탐색하며 1건씩 파싱하는 방식 자체는 항상 gson과 json.simple가 빠름.
+큰 단위를 한 번에 파싱할 때 gson의 속도가 떨어짐.
+반면 Jackson은 JDK 1.8부터 Stream API를 사용하여 적은 량의 파싱의 속도도 향상됨을 알 수 있음.
