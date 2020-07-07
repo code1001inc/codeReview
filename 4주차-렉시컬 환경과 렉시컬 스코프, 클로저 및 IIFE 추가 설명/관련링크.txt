@@ -1,0 +1,5 @@
+﻿스코프(Scope) - https://poiemaweb.com/js-scope
+
+클로저(closure)의 개념 - https://poiemaweb.com/js-closure
+
+클로저 발생 이슈 - http://jsfiddle.net/jakepb/x5kjc7g6/2/
