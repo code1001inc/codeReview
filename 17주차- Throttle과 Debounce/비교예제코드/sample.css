@@ -1,0 +1,42 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  background: #eee;
+}
+
+.area {
+  width: 300px;
+  height: 200px;
+  margin: 20px auto;
+  background: white;
+  position: relative;
+}
+
+.inside {
+  height: 200px;
+  position: relative;
+  overflow: auto;
+}
+
+.content {
+  height: 5000px;
+}
+
+.thing {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  background: #f06d06;
+  color: white;
+  padding: 10px;
+}
+
+.count {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

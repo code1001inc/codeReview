@@ -1,0 +1,5 @@
+﻿디바운스와 스로틀 그리고 차이점 - https://webclub.tistory.com/607
+
+쓰로틀링과 디바운싱 - https://www.zerocho.com/category/JavaScript/post/59a8e9cb15ac0000182794fa
+
+Throttle 와 Debounce 개념 정리하기 - https://medium.com/@pks2974/throttle-%EC%99%80-debounce-%EA%B0%9C%EB%85%90-%EC%A0%95%EB%A6%AC%ED%95%98%EA%B8%B0-2335a9c426ff
