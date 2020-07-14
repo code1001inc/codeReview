@@ -1,0 +1,5 @@
+JSP include - https://eggrok1.tistory.com/entry/java-jsp-include-%EB%9E%80
+EL - https://ojava.tistory.com/21
+EL ¹× JSTL - https://hunit.tistory.com/203
+JSTL ÇÔ¼ö - https://gangzzang.tistory.com/entry/JSP-JSTLJSP-Standard-Tag-Library-%ED%95%A8%EC%88%98-%ED%83%9C%EA%B7%B8functions
+
