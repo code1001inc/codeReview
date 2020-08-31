@@ -1,0 +1,2 @@
+//ESLint에서 제외할 파일
+/node_modules/**
