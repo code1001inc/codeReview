@@ -38,7 +38,7 @@ public class java_test0 {
 		Collections.sort(dn);
 		System.out.print("[4] ");
 		for(String name : dn) 
-			System.out.print(name+"  ");
+			System.out.print(name+"   ");
 		System.out.println();
 	}
 	
