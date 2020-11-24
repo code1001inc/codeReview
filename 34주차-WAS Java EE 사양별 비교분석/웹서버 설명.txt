@@ -1,0 +1,53 @@
+﻿< ISSUE >
+★ [WEB], [DEL] : 아이엔씨 기준
+	
+* 웹서버(Web Server)
+  - H/W : 클라이언트가 브라우저를 통해 접근할 페이지에 관련된 프로그램, 자원 등을 저장시켜두는 물리적 공간
+	>> [WEB] SR650서버, DTG서버 등
+	>> [DEL] 클라이언트 PC (델파이실행파일 설치위치)
+	>> [ISSUE] P550(유닉스)   ▶ SR650_1(리눅스)
+	           P520_2(유닉스) ▶ SR650_2(리눅스)
+  - S/W : 클라이언트가 브라우저에서 요청시 정적컨텐츠를 제공 Ex)HTML,CSS,JavaSript,Image 등
+	>> [WEB] 없음, WAS에서 처리
+	>> [DEL] form,Resource,Image,FormEvent
+  - 웹서버(S/W)의 종류 : Apache, nginx, iis 등
+
+* 웹 어플리케이션 서버(WAS:Web Application Server)
+  - 클라이언트가 브라우저에서 요청시 동적컨텐츠를 제공(DB관련,비즈니스로직 등)
+  - DB관련 요청 수행가능(미들웨어)
+	>> [DEL] BDE.exe(DEL6), FireDacComponent내장 (DEL10)
+  - JSP, Servlet 구동환경 제공(컨테이너)
+	>> [DEL] 델파이 WebBrowser컴포넌트에서 만든 웹페이지와 델파이소스(Unit)간 작업이 필요한 경우 사용하는 기술
+  - 웹서버의 S/W기능인 정적컨텐츠를 제공 가능
+  - WAS의 종류 : RESIN, WildFly, Tomcat, JBOSS, Jeus 등  
+	>> [WEB] RESIN3 사용 중
+	>> [ISSUE] RESIN3 ▶ RESIN4 ▷ WildFly21.x
+
+* 웹 서버 구성방식 
+    H/W    S/W
+  - 1서버 = Web Server+WAS
+  - 1서버 = WAS
+  - 2서버 = WebServer / WAS
+  - N서버 = WebServer / WAS / WAS / WAS..
+	    WAS / WAS / WAS (천일방식)
+		   
+* JDK(Java Development Kit)
+  - JDK : JAVA프로젝트 개발에 필요한 도구 패키지(컴파일 등에 사용 : JAVA → CLASS) 
+  - JRE : JAVA(CLASS)코드를 실행하기 위환 환경 구성
+  - JVM : JAVA(CLASS)코드실행 (바이너리코드)
+	>> [WEB] JDK 1.6
+	>> [DEL] 델파이6, 델파이10 (델파이 버전)
+	>> <ISSUE> JDK1.6 ▶ JDK 1.8
+
+* JAR(Java Archive)
+  - Java에서 사용하는 클래스파일, 리소스 등 라이브러리 집합체
+	>> [DEL] TNSComp, IndyComp, QuickReportComp, 외부DLL 등 
+  - 프로젝트 구동시 별도의 JAR라이브러리 기능 사용시 함께 배포
+	>> [WEB] 프로젝트 내 배포(개별) + WAS에 배포(공용)
+	>> [DEL] 컴파일시 EXE에 포함시켜 배포 + 외부 DLL은 EXE와 함께 배포	
+	>> <ISSUE> WAS 배포(공용) ▷ 프로젝트 내 배포(개별)
+	
+	
+	
+
+   
