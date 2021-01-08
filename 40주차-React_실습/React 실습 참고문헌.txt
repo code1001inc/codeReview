@@ -1,3 +1,0 @@
-참고문헌
-React 공식 홈페이지 - https://ko.reactjs.org/docs/hello-world.html
-모던 리액트 - https://react.vlpt.us/
