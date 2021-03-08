@@ -1,0 +1,45 @@
+/* ESLint */
+// 코딩 스타일을 정형화하여 코드 오류를 검증하고
+// 협업 시 코딩 스타일을 통일을 강요한다.
+// 자주 쓰이는 airbnb 사의 코딩 스타일을 사용함.
+//
+// 기본 사용법은 "eslint [파일명|경로] "혹은 경로에서 " eslint 파일명 ". 
+{
+  /* parserOptions */
+  // 자바스크립트 버전, 모듈 사용여부.
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType": "module"
+  },
+  
+  /* extends */
+  // 확장 설정. airbnb사의 코딩 스타일로 설정.
+  "extends": "airbnb-base",
+  
+  /* extends */
+  // 프로젝트 사용 환경.
+  "env": {
+    "browser": true
+  },
+  
+  /* rules */
+  // extends와 plugins에 대한 세부 설정을 변경하는 코드.
+  // 항목 : 설정값. 0 - 에러검출 안함. 1 - 경고, 2- 에러.
+  "rules": {
+    "max-len": 0 // 최대 줄 길이에 대한 에러 검출 X
+  },
+  
+  /* plugins */
+  // 같이 사용할 추가적인 플러그인. 대표적으로 html, import가 있음.
+  "plugins": ['import'],
+  
+  /* globals */
+  // 사용할 전역변수를 넣음. 
+  // ESLint는 기본적으로 전역변수 사용을 에러로 처리함.
+  // 제이쿼리 같은 외부 라이브러리를 사용할 경우 기입.
+  "globals": {
+    "jQuery": true,
+    "$": true,
+    'linebreak-style': 0,
+  }
+}

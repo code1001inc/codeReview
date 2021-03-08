@@ -1,0 +1,11 @@
+﻿1급 시민, 1급 객체, 1급 함수 : https://www.hanumoka.net/2017/08/31/javascript-20170831-javascript-first-object/
+
+호이스팅(Hoisting) : https://developer.mozilla.org/ko/docs/Glossary/Hoisting
+
+클로저(Closure) : https://developer.mozilla.org/ko/docs/Web/JavaScript/Guide/Closures
+
+즉시 실행 함수 표현(IIFE) : https://developer.mozilla.org/ko/docs/Glossary/IIFE
+
+함수 표현식 : https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Operators/function
+
+함수 표현식 vs 함수 선언식 : https://joshua1988.github.io/web-development/javascript/function-expressions-vs-declarations/

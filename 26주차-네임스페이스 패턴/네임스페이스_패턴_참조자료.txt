@@ -1,0 +1,24 @@
+﻿참조 : http://www.nextree.co.kr/p7650/
+
+//var를 사용한 암묵적 전역 변수
+https://jsfiddle.net/jakepb/jcfvk2g1/
+
+
+//즉시 실행 함수와 즉시 객체 초기화
+/* 함수 선언문과 즉시 실행 함수 */
+https://jsfiddle.net/jakepb/jcfvk2g1/3/
+/* 즉시 객체 초기화 */
+https://jsfiddle.net/jakepb/jcfvk2g1/7/ 
+
+
+//네임 스페이스 패턴
+/* 객체 리터럴 네임스페이싱 */
+https://jsfiddle.net/jakepb/jcfvk2g1/9/
+
+/* this 키워드를 사용한 참조 */
+https://jsfiddle.net/jakepb/jcfvk2g1/11/
+
+/* 범용 네임스페이스 함수 */
+https://jsfiddle.net/jakepb/jcfvk2g1/19/
+
+

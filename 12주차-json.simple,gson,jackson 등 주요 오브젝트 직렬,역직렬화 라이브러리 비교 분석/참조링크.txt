@@ -1,0 +1,7 @@
+﻿Jsonp - https://ko.wikipedia.org/wiki/JSONP
+
+2015 - 파서 퍼포먼스
+https://blog.overops.com/the-ultimate-json-library-json-simple-vs-gson-vs-jackson-vs-json/
+
+2019 - 파서 퍼포먼스
+https://programmer.help/blogs/performance-comparison-of-several-common-json-libraries-in-java.html
