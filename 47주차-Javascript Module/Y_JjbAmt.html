@@ -1,0 +1,126 @@
+
+
+
+
+
+
+<!-- 수영 Test JS 적용 -->
+
+<script type="text/javascript" src="../html/SuYoung_js/ajax.js?version={{version}}"></script>
+<script type="text/javascript" src="../html/SuYoung_js/validation.js?version={{version}}"></script>
+<script type="text/javascript" src="../html/SuYoung_js/myJqxgrid/A_OddCod_Jqxgrid.js?version={{version}}"></script>
+<script type="text/javascript" src="../html/SuYoung_js/myJqxgrid/Y_JjbAmt_Jqxgrid.js?version={{version}}"></script>
+<script type="text/javascript" src="../html/SuYoung_js/dropdownBoxModule.js?version={{version}}"></script>
+<script type="text/javascript" src="../html/SuYoung_js/radioButtonModule.js?version={{version}}"></script>
+<script type="text/javascript" src="../html/SuYoung_js/inputTagModule.js?version={{version}}"></script>
+<script type="text/javascript" src="../html/SuYoung_js/basicOperationModule.js?version={{version}}"></script>
+<script type="text/javascript" src="../html/SuYoung_js/A.procMaker.js?version={{version}}"></script>
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" type="text/css" href="../css/styleKDBP.css"/>
+<style>
+.back1 {
+	color: black;
+	background-color: #eff9b8;
+}
+.back2 {
+	color: black;
+	background-color: #ffe3a8;
+}
+.green {
+	color: black\9;
+	background-color: #b6ff00\9;
+}
+.yellow {
+	color: black\9;
+	background-color: yellow\9;
+}
+.red {
+	color: black\9;
+	background-color: #e83636\9;
+}
+.green:not(.jqx-grid-cell-hover):not(.jqx-grid-cell-selected), .jqx-widget .green:not(.jqx-grid-cell-hover):not(.jqx-grid-cell-selected) {
+ color: black;
+ background-color: #b6ff00;
+}
+.yellow:not(.jqx-grid-cell-hover):not(.jqx-grid-cell-selected), .jqx-widget .yellow:not(.jqx-grid-cell-hover):not(.jqx-grid-cell-selected) {
+ color: black;
+ background-color: yellow;
+}
+.red:not(.jqx-grid-cell-hover):not(.jqx-grid-cell-selected), .jqx-widget .red:not(.jqx-grid-cell-hover):not(.jqx-grid-cell-selected) {
+ color: black;
+ background-color: #e83636;
+}
+#CODMST_Modal{
+	z-index: 9999	;
+}
+</style>
+
+
+<!-- container 태그를 생성하고 고유 id값을 부여한다.  -->
+<div id='Y_JjbAmt' >
+
+<!-- 타이틀 -->
+<div class="titleDiv">
+  <div class="divTdTitle01"> <span class="midTitle">노무비/제조경비 관리</span> </div>
+  <div class="divTdTitle02">
+  	<input type="button" id="resetBtn" class="Btn_reset" />
+    <input type="button" id="searchBtn" class="Btn_search"  />    
+    <input type="button" id="addBtn" class="Btn_add" />
+    <input type="button" id="saveBtn" class="Btn_save" />
+    <input type="button" id="deleteBtn" class="Btn_delete" />    
+    <input type="button" id="printBtn" class="Btn_print" />
+    <input type="button" id="excelBtn" class="Btn_excel" />
+    <input type="button" id="closeBtn" class="Btn_close" />
+  </div>
+</div>
+<!-- 타이틀 -->
+<div class="divLayoutLeft" style="width:100%;">
+      <!-- 조회내역 -->
+  <div class="search1" >현황</div>
+  <div class="searchResion1" style="height: 90px;" id="div_search1">
+		<div id="div1">
+			<div class="divTd01" style="left:0px; top: 7px; width:116px;">회계연도</div>
+			<div style="position:absolute; width: 258px; left:123px; top: 7px;">
+				<input type="text" class="input7 selectCondition resetTarget timePicker" id="STRDAT" name="STRDAT" value="{{Year}}" style="width: 55px; "/>
+			</div>
+			<div class="divTd01" style="left:261px; top: 7px; width:116px;">기수구분</div>
+			<input name="ODDGBN"  type="text" class="input7 selectCondition resetTarget" id="ODDGBN" style="position:absolute; width: 46px; top: 7px; left: 371px;" value=""  />
+     	<input name="ODDGBNNM"  type="text" class="input7r" id="ODDGBNNM" style="position:absolute; width: 100px; left: 435px;top: 7px; margin-left: -9px;" value=""  readonly="readonly"/>
+	 		<input type="button" id="ODDGBNhelp" class="btn btn-default" value="?" style="position:absolute; height:18px; padding:1px; top: 7px; left:544px; width:20px; margin: 0 0 4px -8px;"/>
+	 		
+			<div class="divTd01" style="left:0px; top: 33px; width:116px;">검색어</div>
+			<input name="SEARCH"  type="text" class="input7 selectCondition resetTarget" id="SEARCH" style="position:absolute; width: 426px; left:123px; top: 33px; ime-mode:active;"value=""/>			
+
+			<div class="divTd01" style="left:0px; top: 59px; width:116px;">검색조건</div>
+      <div style="position:absolute; width: 656px; left:123px; top: 61px;">
+	      <input type="radio" name="SCHGBN" class='selectCondition' value="ACDEXT" style="vertical-align:middle; border: 0px;" checked="checked" />
+	      계정과목 
+			</div>		
+			
+			<input type="button" id="EXCEUP" class="btn btn-success" value="엑셀업로드" onclick="year_select()" style="position:absolute; width: 66px; left:595px; top: 3px; height: 15px; font-size:12px; background-color:#315343; color:#FFF; cursor:pointer" />
+		</div>
+  </div>
+	  <!-- 데이터Table -->
+  <div id='jqxWidget' style="font-size: 13px; font-family: Verdana; ">
+  	<div id="jqxgrid"></div>
+  </div>
+</div>
+
+</div>
+
+
+<script>
+	// procMaker( 프로그램 id값 , 데이터 조회시 사용할 URL ) 함수를 실행한다. 
+	procMaker( 'Y_JjbAmt' , 'Y_data.jsp' );
+</script>
+
