@@ -1,0 +1,152 @@
+
+
+
+<!-- 수영 Test JS 적용 -->
+<script type="text/javascript" src="../html/SuYoung_js/ajax.js?version={{version}}"></script>
+<script type="text/javascript" src="../html/SuYoung_js/validation.js?version={{version}}"></script>
+<script type="text/javascript" src="../html/SuYoung_js/myJqxgrid/A_OddCod_Jqxgrid.js?version={{version}}"></script>
+<script type="text/javascript" src="../html/SuYoung_js/myJqxgrid/Y_JjbAmt_Jqxgrid.js?version={{version}}"></script>
+<script type="text/javascript" src="../html/SuYoung_js/dropdownBoxModule.js?version={{version}}"></script>
+<script type="text/javascript" src="../html/SuYoung_js/radioButtonModule.js?version={{version}}"></script>
+<script type="text/javascript" src="../html/SuYoung_js/inputTagModule.js?version={{version}}"></script>
+<script type="text/javascript" src="../html/SuYoung_js/basicOperationModule.js?version={{version}}"></script>
+<script type="text/javascript" src="../html/SuYoung_js/A.procMaker.js?version={{version}}"></script>
+
+
+
+
+
+
+
+
+<style>
+	th {font-size: 15px;}
+</style>
+<link rel="stylesheet" type="text/css" href="../css/styleKDBP.css"/>
+<!--[if lte IE 7]>
+        <link rel="stylesheet" type="text/css" href="../css/styleCFMS_ie.css" media="screen" />      
+<![endif]-->
+
+
+
+
+
+<!-- container 태그를 생성하고 고유 id값을 부여한다.  -->
+<div id='A_OddCod'>
+
+<!-- 타이틀 -->
+<div class="titleDiv">
+  <div class="divTdTitle01"> <span class="midTitle">기수기준관리</span> </div>
+  <div class="divTdTitle02">
+  
+  	<input type="button" id="resetBtn" class="Btn_reset" />
+    <input type="button" id="searchBtn" class="Btn_search"  />    
+    <input type="button" id="addBtn" class="Btn_add" />
+    <input type="button" id="saveBtn" class="Btn_save" />
+    <input type="button" id="deleteBtn" class="Btn_delete" />    
+    <input type="button" id="printBtn" class="Btn_print" />
+    <input type="button" id="excelBtn" class="Btn_excel" />
+    <input type="button" id="closeBtn" class="Btn_close" />
+  </div>
+</div>
+<!-- 타이틀 -->
+<!-- 왼쪽영역 -->
+<div style="height: 90vh;">
+<div id="split_layout">
+  <div class="divLayoutLeft" style="display: flex; flex-direction: column;">
+     <div class="search1" >기수등록현황</div>
+     <div class="searchResion1" style="height: 42px;" id="div_search1">
+		  <div id="div1">
+		    <div class="divTd01" style="left:0px; top: 10px; width:116px;">기수명</div>
+				<input name="ODDGBN2"  type="text" class="input7 selectCondition resetTarget" id="ODDGBN2" style="position:absolute; width: 46px; top: 10px; left: 110px;" value=""  />
+     		<input name="ODDNAM2"  type="text" class="input7r selectCondition resetTarget" id="ODDNAM2" style="position:absolute; width: 100px; left: 174px;top: 10px; margin-left: -9px;" value=""  readonly="readonly"/>
+	 			<input type="button" id="ODDGBNhelp2" class="btn btn-default" value="?" style="position:absolute; height:18px; padding:1px; top: 10px; left:283px; width:20px; margin: 0 0 4px -8px;"/>
+		  </div>
+		</div>
+		<div id='jqxWidget' style="flex: 1;">
+			<div id="jqxgrid"></div>
+		</div>
+  </div>
+  
+	<div class="divLayoutRight">
+		<div class="search2"  >상세정보</div>
+    <div class="searchResion1" style="height: 100%;" id="div_search2">
+     <div id="div1">
+	     <table class="table table-bordered" id="input_table">
+	      <colgroup>
+					<col width="24%"/>
+					<col width="21%"/>
+					<col width="45%"/>
+	      </colgroup>
+			 	<tr>
+			 		<th>기수명</th>
+			 		<td style="width: 25%"> 
+			 			<input name="ODDGBN"  type="text" class="input7 detailTag resetTarget" id="ODDGBN" style="width: 46px;" value=""  />
+	      		<input name="ODDNAM"  type="text" class="input7 detailTag resetTarget" id="ODDNAM" style="width: 100px; margin-left: -9px;" value=""/>
+	      	</td>
+	      	<td style="width: 75%">
+	      		&nbsp;&nbsp;
+			      <input type="radio" name="RSTPLN" value="PLN" class="radioButton detailTag resetTarget radioDefault" style=" vertical-align:middle; border: 0px;"  checked="checked"/>
+			   	    계획 &nbsp;&nbsp;
+			      <input type="radio" name="RSTPLN" value="RST" class="radioButton detailTag resetTarget" style=" vertical-align:middle; border: 0px;"/>
+			     	 실적 &nbsp;&nbsp;
+	      	</td>
+			 	</tr>
+			 	<tr>
+			 		<th>기수기간</th>
+			 		<td colspan="2">
+						<div style="width: 258px; ">
+							<input type="text" class="input7 timePicker detailTag resetTarget" id="STRDAT" name="STRDAT" value="{{Month}}" style="width: 55px; "/> ~
+							<input type="text" class="input7 timePicker detailTag resetTarget" id="ENDDAT" name="ENDDAT" value="{{Month}}" style="width: 55px; "/>
+						</div>
+			 		</td>
+			 	</tr>
+			 	<tr>
+			 		<th>제품관리</th><td colspan="2"><select id="JEPMST" name="제품관리" class="input7 detailTag resetTarget" style="width: 155px;"></select></td>
+			 	</tr>
+			 	<tr>
+			 		<th>자재관리</th><td colspan="2"><select name="자재관리" id="MATMST" class="input7 detailTag resetTarget" style="width: 155px;"></select></td>
+			 	</tr>
+			 	<tr>
+			 		<th>거래처관리</th><td colspan="2"><select name="거래처관리" id="CSTMST" class="input7 detailTag resetTarget" style="width: 155px;"></select></td>
+			 	</tr>
+			 	<tr>
+			 		<th>계정과목관리</th><td colspan="2"><select name="계정과목관리" id="ACDMST" class="input7 detailTag resetTarget" style="width: 155px;"></select></td>
+			 	</tr>
+			 	<tr>
+			 		<th>활동센터관리</th><td colspan="2"><select name="활동센터관리" id="BUSMST" class="input7 detailTag resetTarget" style="width: 155px;"></select></td>
+			 	</tr>
+			 	<tr>
+			 		<th>BOM관리</th><td colspan="2"><select name="BOM관리" id="BOMMST" class="input7 detailTag resetTarget" style="width: 155px;"></select></td>
+			 	</tr>
+			 	<tr>
+			 		<th>비고</th><td colspan="2"><input name="REMARK" type="text" id="REMARK" class="input7 detailTag resetTarget" style="width: 92.5%;"/></td>
+			 	</tr>
+			 	<tr>
+			 		<th>등록정보</th><td><input name="INPDAT" id="INPDAT" type="text" class="input7r detailTag resetTarget" style="width: 135px;" readonly="readonly"/></td>
+			 		<td><input name="INPSBN" id="INPSBN" type="text" class="input7r detailTag resetTarget" style="width: 135px;" readonly="readonly"/></td>
+			 	</tr>
+			 	<tr>
+			 		<th>수정정보</th><td><input name="UPTDAT" id="UPTDAT" type="text" class="input7r detailTag resetTarget" style="width: 135px;" readonly="readonly"/></td>
+			 		<td><input name="UPTSBN" id="UPTSBN" type="text" class="input7r detailTag resetTarget" style="width: 135px;" readonly="readonly"/></td>
+			 	</tr>
+	     </table>
+	    </div>
+    </div>
+	</div>
+</div>
+</div>
+
+</div>
+
+
+<script>
+	$("#split_layout").jqxSplitter({ theme: 'base', width: '99%', height: '100%', panels: [{ size: '60%', min: 250 }] });
+
+	// procMaker( 프로그램 id값 , 데이터 조회시 사용할 URL ) 함수를 실행한다.
+	procMaker( 'A_OddCod' , 'A_data.jsp' );
+
+</script>
+
+
+
