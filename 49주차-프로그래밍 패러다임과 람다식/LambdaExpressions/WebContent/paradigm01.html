@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<style>
+.unclicked
+{
+	color: yellow;
+}
+.clicked
+{
+	color: red;
+}
+</style>
+<body>
+	<div>
+		<label>명령형</label>
+		<button id="button1" class="unclicked"> 토글 </button>
+		<button id="button2"> 더블 </button><input/>
+		<button id="button3"> 합계 </button><input/>
+	</div>
+	<hr>
+	<div>
+		<label>선언형</label>
+		<button id="button4" class="unclicked"> 토클 </button>
+		<button id="button5"> 더블 </button><input/>
+		<button id="button6"> 합계 </button><input/>
+	</div>	
+	
+</body>
+<script>
+	const CLICKED_COLOR = "clicked";
+	const UNCLICKED_COLOR = "unclicked";
+	const ARRAY = [10, 20, 30, 40, 50];
+	
+	/* 명령형 */
+	const toggleBtn1 = document.getElementById('button1');
+	const dubbleBtn1 = document.getElementById('button2');
+	const sumBtn1 = document.getElementById('button3');
+	toggleBtn1.addEventListener("click", clickToggleImpl);
+	dubbleBtn1.addEventListener("click", doubleImpl(ARRAY));
+	sumBtn1.addEventListener("click", event=>sumImpl(ARRAY));
+	
+	// 버튼 토글 이벤트
+	function clickToggleImpl(){
+		if (toggleBtn1.classList.contains(CLICKED_COLOR)){
+			toggleBtn1.classList.remove(CLICKED_COLOR);
+			toggleBtn1.classList.add(UNCLICKED_COLOR);	
+		}else{
+			toggleBtn1.classList.remove(UNCLICKED_COLOR);
+			toggleBtn1.classList.add(CLICKED_COLOR);
+		}
+	}		
+	
+	//배열을 파라미터로 받고 각 요소들의 값에 2를 곱하는 함수 
+	function doubleImpl(arr){
+		let results = []; 
+		for (let i = 0; i < arr.length; i++){ 
+			results.push(arr[i] * 2) 
+		} 
+		/* console.log(results); */
+		dubbleBtn1.nextElementSibling.value = results;
+		return results; 
+	}
+	
+	//배열을 파라미터로 받고 각 요소들을 합하는 함수 
+	function sumImpl(arr){
+		let result = 0;
+		for (let i = 0; i < arr.length; i++){ 
+			result += arr[i]; 
+		} 
+		/* console.log(result); */
+		sumBtn1.nextElementSibling.value = result;
+		return result; 
+	}
+	
+	/* 선언형 */
+	const toggleBtn2 = document.getElementById('button4');
+	const dubbleBtn2 = document.getElementById('button5');
+	const sumBtn2 = document.getElementById('button6');
+	toggleBtn2.addEventListener("click", clickToggleDecl);
+	dubbleBtn2.addEventListener("click", event=>doubleDecl(ARRAY));
+	sumBtn2.addEventListener("click", event=>sumDecl(ARRAY));
+
+	// 버튼 토글 이벤트
+	function clickToggleDecl(){
+		toggleBtn2.classList.toggle(CLICKED_COLOR);
+	}		
+	
+	//배열을 파라미터로 받고 각 요소들의 값에 2를 곱하는 함수 
+	function doubleDecl(arr){
+		/* console.log(arr.map((item) => item * 2)); */
+		dubbleBtn2.nextElementSibling.value = arr.map((item) => item * 2);
+		return arr.map((item) => item * 2); 
+	}
+	
+	//배열을 파라미터로 받고 각 요소들을 합하는 함수 
+	function sumDecl(arr){
+		/* console.log(arr.reduce((prev, current) => prev + current, 0)); */
+		sumBtn2.nextElementSibling.value = arr.reduce((prev, current) => prev + current, 0);
+		return arr.reduce((prev, current) => prev + current, 0); 
+	}
+
+
+</script>
+</html>
+
+
