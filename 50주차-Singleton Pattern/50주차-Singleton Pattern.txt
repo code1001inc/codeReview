@@ -1,0 +1,76 @@
+[싱글톤 패턴(Singleton Pattern)]
+1)Singleton이 무엇인가?
+ - Singleton은 어떤 클래스가 최초 한 번만 메모리에 할당하고(Static) 그 메모리에 대해서 객체를 만들어 사용하는 디자인 패턴이다.
+ - 생성자 호출이 반복적으로 발생한다고 하더라도, 새로운 인스턴스를 생성하는 것이 아니라 최초 생성된 인스턴스를 반환해주는 것을 말한다.
+
+2)singleton을 왜 사용하는가?
+ - 고정된 메모리 영역을 얻으며 생성된 인스턴스를 계속 사용하기 때문에 메모리 낭비를 방지할 수 있으며, 생성된 인스턴스는 전역 
+   인스턴스이기 때문에 다른 클래스의 인스턴스들이 데이터를 공유하기가 쉽다고 한다.
+ - DBCP(DataBase Connection Pool) 같이 공통된 객체를 여럿 생성해 사용해야할 때 많이 사용한다.
+   (쓰레드풀, 캐시, 대화상자, 사용자 설정, 레지스트리 설정, 로그 기록 객체등)
+ - 안드로이드 앱 같은 경우 각 액티비티나 클래스별로 주요 클래스들을 일일이 전달하기가 번거롭기 때문에 싱글톤 클래스를 만들어 
+   어디서나 접근하도록 설계하는 것이 편하기 때문이다.
+
+3)Singleton 사용 시 유의점
+ - Singleton에게 너무 많은 일을 하거나, 많은 데이터를 공유시키면 다른 클래스의 인스턴스 간 결합도가 높아지면서 개방-폐쇄 
+   원칙을 위배하는 문제가 있다.
+ - 수정이 어려워지고 테스트하기가 어려워지기도 하고, Multi-Thread에서 동기화 처리를 해주지 않는 경우 인스턴스가 두 개 
+   생성되는 등 Thread-Safe 문제가 발생할 수 있다.
+
+>> Eager Initialization
+가장 기본적인 singleton pattern이다. 
+전역 변수로 instance를 만드는데 private static을 이용한다. 
+static이 붙은 클래스변수는 인스턴스화에 상관없이 사용이 가능하게 된다. 
+하지만 앞의 private 접근제어자로 인해 EagerInitialization.instance로의 접근은 불가능하다. 
+이런 상태에서 생성자를 private로 명시한다. 생성자를 private로 붙이게되면, new 키워드를 사용할 수 없게된다. 
+즉 다른 클래스에서 EagerInitialization instance = new EagerInitialization(); 이런 방법을 통한 인스턴스 생성은 불가능해진다. 
+결국 외부 클래스가 EagerInitialization 클래스의 인스턴스를 가질 수 있는 방법은 getInstance() method를 사용하는 수 밖에 없다.
+static으로 생성된 변수에 싱글톤 객체를 선언했기 때문에 클래스 로더에 의해 클래스가 로딩 될 때 싱글톤 객체가 생성됩니다. 
+또 클래스 로더에 의해 클래스가 최초 로딩 될 때 객체가 생성됨으로 Thread-safe합니다.
+리소스가 작은 프로그램일때엔 고도화 대상이 아니다. 
+하지만 프로그램의 크기가 커져서 수 많은 클래스에서 위와 같은 singleton pattern을 사용한다고 가정해보자. 
+new EagerInitialization();으로 인해 클래스가 load 되는 시점에 인스턴스를 생성시키는데 이마저도 부담스러울 수가 있다. 
+또한 이 소스는 EagerInitialization 클래스가 인스턴스화 되는 시점에 어떠한 에러처리도 할 수가 없다.
+
+>> Static Block Initialization
+static 초기화블럭을 이용하면 클래스가 로딩 될 때 최초 한번 실행하게 된다. 
+특히나 초기화블럭을 이용하면 logic을 담을 수 있기 때문에 복잡한 초기변수 셋팅이나 에러처리를 위한 구문을 담을 수 있다. 
+Eager Initialization 패턴보다 좋아보이지만 인스턴스가 사용되는 시점에 생성되는 것은 아니다.
+
+>> Lazy Initialization
+new LazyInitialization(); 가 어디에 선언되었는지 주목해보자. 
+getInstance() method 안에서 사용되었다. 
+if문을 이용해 instance가 null 인 경우에만 new를 사용해 객체를 생성하였다. 
+최초 사용시점에만 인스턴스화 시키기 때문에 프로그램이 메모리에 적재되는 시점에 부담이 많이 줄게된다. 
+하지만 여전히 문제는 남아있다. 
+만약 프로그램이 muilti thread 방식이라면 지금의 singleton pattern은 안전하지 않다. 
+동일 시점에 getInstance() method를 호출하면 인스턴스가 두번 생길 위험이 있다.
+
+>> Thread Safe Initialization
+문제가 되었던 muilit thread문제를 해결하기 위해 synchronized(동기화)를 사용하여 singleton pattern을 구현한다. 
+여러 thread들이 동시에 접근해서 인스턴스를 생성시키는 위험은 없어졌다. 
+하지만 수 많은 thread 들이 getInstance() method 를 호출하게 되면 높은 cost 비용으로 인해 프로그램 전반에 성능저하가 일어난다.
+
+>> DCL(Double-Checking Locking) Initinalization
+DCL(Double-Checking Locking)을 사용하면, 일단 인스턴스가 생성되어 있는지 확인한 다음, 생성되어있지 않았을 때만 동기화를 할 수 있다.
+이렇게 하면 처음에만 동기화를 하고 나중에는 동기화를 하지 않아도 된다.
+getInstance() 메소드를 사용할 떄 속도가 문제가 될 수 있다면 이런식으로 Singleton을 구현함으로써 오버헤드를 극적으로 줄일 수 있다.
+※volatile 키워드
+https://nesoy.github.io/articles/2018-06/Java-volatile
+
+>> Initinalization on Demand Holder Idiom
+미국 메릴랜드 대학의 컴퓨터 과학 연구원인 Bill pugh 가 기존의 java singleton pattern이 가지고 있는 문제들을 해결 하기위해
+제시한 새로운 Singleton Pattern이다.
+이것은 JVM의 class loader의 매커니즘과 class의 load 시점을 이용하여 내부 class를 생성시킴으로 thread 간의 동기화 문제를 해결한다.
+JVM의 class 초기화 과정에서 보장되는 원자적 특성을 이용하여 싱글턴의 초기화 문제에 대한 책임을 JVM에 떠넘긴다.
+holder안에 선언된 instance가 static이기 때문에 클래스 로딩시점에 한번만 호출될 것이며 final을 사용해 다시 값이 할당되지 않도록 만든 방법이다.
+Synchronized를 사용하지 않아서 성능 저하까지 해결이 가능하다.
+현재 java에서 Singleton을 생성시킨다고 하면 거의 위의 방법을 사용한다고 보면 된다.
+
+>> Enum Initialization
+Joshua Bloch가 작성한 effective java 책에서 enum singleton 방법이 소개 되었다.
+enum 이 singleton pattern 으로 사용될 수 있는 이유는 아래와 같다.
+ - INSTANCE 가 생성될 때, multi thread 로 부터 안전하다. (추가된 methed 들은 safed 하지 않을 수도 있다.)
+ - 단 한번의 인스턴스 생성을 보장한다.
+ - 사용이 간편하다.
+ - enum value는 자바 프로그램 전역에서 접근이 가능하다.
