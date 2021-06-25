@@ -1,0 +1,40 @@
+안드로이드 스튜디오!!!!
+1. 안드로이드 스튜디오????
+  초기엔 이클립스에 ADT를 설치하여 안드로이드 앱을 개발 하였다.
+  하지만 구글 이샏기가 이클립스 ADT에 대한 지원을 종료를 하였음 2015년도 까지만 지원해준다.
+  기사 : https://zdnet.co.kr/view/?no=20150628150257
+  근데 구글 이샏기가 2013년에 안드로이드 스튜디오를 처음 공개했고 그뒤에 안정화가 되어서 이렇게 연줄을 짜른것임.
+
+  21년 06월 22일 기준 4.2.1 버전이고 (ME)
+  안정화 버전은 4.1.1이다
+
+  기능개요 : https://developer.android.com/studio/features.html
+  Android 스튜디오는 Android의 공식 IDE입니다.
+  Android용으로 특수 설계되어 개발 속도가 배가되고 모든 Android 기기에 맞는 최상급 품질의 앱을 빌드할 수 있습니다.
+
+2. 안드로이드 스튜디오 설치 후 환경설정
+   SDK 다운로드 및 설정
+          
+3. 구조설명
+   java 니쓸게 layout.xml 
+   layout, drawable, styles.xml    
+   androidManifest 쓸수있게 해줘
+   이클립스 : db연동
+   
+4. 생명주기
+   안드로이드 개발에 앞서 생명주기를 반드시 알아야한다
+   델파이도 생명주기가 존재한다 (알지만 모르고 쓰고있음)
+   자료 : https://brunch.co.kr/@mystoryg/80
+   
+5. 실습
+   -. 화면이동 처리   대충함 
+   -. 디자인(style) 하다가 말음 개초보
+      단위 : https://salix97.tistory.com/8
+   -. 권한
+      안드로이드 권한 설정  : https://support.google.com/googleplay/answer/6270602?hl=ko
+      안드로이드 6.0버전 이후 부터는 권한 커미션을 사용자가 직접 허용해야 그 권한을 받아 자료를 제어 할 수 있게 바뀌었다(해킹 및 정보보안 문제 사유)
+      그 이하의 버전에는 개발자가 직접 권한을 부여하여 그냥 땡겨 올 수 있음	 
+   -. 데이터 송수신
+      결과값 return :  Handler(스레드) 제어 : https://brunch.co.kr/@mystoryg/84
+   -. 리스트
+      Adapter : https://arabiannight.tistory.com/77
