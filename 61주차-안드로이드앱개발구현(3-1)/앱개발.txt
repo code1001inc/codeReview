@@ -1,0 +1,35 @@
+ - LinearLayout : 화면을 구성할 때 가장 기본적인 <div>와 같은 개념
+ 
+ - orientation 속성 정의
+   horizontal : 가로 
+   vertical   : 세로
+   weight     : 가중치, 가로일 경우 layout_width는 0이 되어야함, 세로일경우 layout_height 0 (사이즈로 줘두 됨 하지만 불편함)
+                https://yoo-hyeok.tistory.com/56
+
+ - 글자, 버튼, 이미지 등 정렬
+   layout_gravity : 부모 영역의 여유 공간에 뷰가 모두 채워지지 않아 여유 공간 안에서 뷰를 정렬할 때 
+   gravity : 뷰에서 화면에 표시하는 내용물을 정렬할 때(텍스트뷰의 경우, 내용물은 글자가 되고 이미지뷰의 경우 내용물은 이미지가 됨)
+   ※ 두가지 정렬 부여 방법 : android:gravity="center|left" //중앙 왼쪽 정렬 (순서 상관없음) 
+ 
+ - Text View : 수정안되는 글자표기 html <font>와 같은 개념
+ 
+ - EditText : 사용자가 입력 할 수 있음. html <input>와 같은 개념
+ 
+ - ImageView : 이미지(사진)을 보여줌
+ 
+ - 선택박스(Spinner) : https://bitsoul.tistory.com/43(4주차)
+   사용자 정의로 만들 수 있고 values 폴더안에 xml 파일을 만들어서 선택박스 리스트를 만들어서 적용 시킬 수 있다.
+ 
+ - 스크롤뷰(ScrollView) : https://taewooblog.tistory.com/102
+ 
+ - 리스트뷰(ListView) : 데이터를 리스트 형식으로 출력을 지원함
+ 
+ - 체크박스(CheckBox) : 체크박스 화면에 출력 (커스텀 하기 까다로움..)
+ 
+ - 라디오(RadioButton) : 라디오 버튼을 출력 
+ 
+ - 라디오 그륩 버튼(RadioGroup) : 라디오 여러개 중 한개만 지정 html에서 name 똑같이 주는거랑 같은개념
+ 
+ - 스위치(Switch) : 활성화 비활성화 기능 on off
+ 
+ - 웹뷰(WebView) : web클라이언트를 보여줄수있게!
