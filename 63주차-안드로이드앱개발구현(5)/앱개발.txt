@@ -1,0 +1,36 @@
+- intent란 무엇인가?? : https://coding-factory.tistory.com/203
+    인텐트는 앱 컴포넌트가 무엇을 할 것인지를 담는 메시지 객체입니다.
+	메시지는 의사소통을 하기 위해 보내고 받는 것이지요.
+	메시지를 사용하는 가장 큰 목적은 다른 액티비티, 서비스, 브로드캐스트 리시버, 컨텐트 프로바이더 등을 실행하는 것입니다.
+	인텐트는 그들 사이에 데이터를 주고 받기 위한 용도로도 쓰입니다. 
+	쉽게설명하면 화면에서 화면 이동 시 파라미터 값을 전달해서 화면이동이 가능하고 파라미터 값 없이도 화면이동이 유용하게 가능하다!!
+	예시 : Intent intent = new Intent(); //새로운 인텐트 생성
+          intent = new Intent(thisView, bbb.class); //이동될 화면 정의
+		  //값전달 시작
+          intent.putExtra("USERID", "김철수");        
+		  //값전달 끝
+          startActivity(intent); //인텐트 시작!
+		  
+		  //그럼 값전달은 어떻게 받나?		
+		  bbb.class에서
+		  Intent intent = getIntent(); //인텐트 가지고 오겟다!
+          Log.e("김철수는 어디있는가?", intent.getStringExtra("USERID")); //김철수가 호출됨		  
+  
+  - 데이터 송수신을 하기 전 Thread와 handler를 알아야한다. 
+	HttpURLConnection 이용한 데이터 송수신 : https://ju-hy.tistory.com/65 
+    Thread : https://donghoson.tistory.com/8
+	handler : https://salix97.tistory.com/82	
+    
+  - 리스트 출력은 어떻게??, 준비물 : ListView, item_listAdapter View
+    ListView와 BaseAdapter를 사용
+	ListView : 1개 이상의 리스트들을 보여지도록 설정하는 레이아웃으로 생각
+	Adapte : ListView가 생성이 되면, 이 안에는 수 많은 데이터들이 저장이 될것이다.
+             어떤 레이아웃이 배치되고 그 안의 데이터는 어떤 데이터가 들어갈것인지 관리해주는 역할을 Adapter가 해준다.
+	BaseAdapter를 : 추상메소드 https://codedragon.tistory.com/3580		 
+	
+	BaseAdapter를 상속받게되면 반드시 구현해야 하는 메소드가 있다
+	 ※ 메소드 확인법 : 해당 메소드에 alt + F7 하면 볼 수 있다.
+	int getCount(): 화면에 표시해야하는 데이터 갯수를 반환한다.(총 갯수로 씀 우린)
+	Object getItem() : 선택(지정)된 위치 id 출력 및 데이터 반환
+	long getItemId() : 해당 데이터를 나타내는 고유한 정보
+	View getView() : 데이터가 화면에 표시될 뷰를 반환해서 출력한다.
