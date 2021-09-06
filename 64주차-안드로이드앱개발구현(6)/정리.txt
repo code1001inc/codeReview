@@ -1,0 +1,18 @@
+	- AlertDialog을 활용한 커스텀 팝업을 만들어 보자!
+	  Context : 애플리케이션의 현재 상태를 나타낸다.
+	            액티비티와 어플리케이션의 정보를 얻기 위해 사용할 수 있다.
+				리소스, 데이터베이스, shared preference 등에 접근하기 위해 사용할 수 있다.
+				액티비티와 애플리케이션 클래스는 Context 클래스를 확장한 클래스이다.
+				
+	  LayoutInflater : LayoutInflater는 XML에 정의된 Resource를 View 객체로 반환해주는 역할을 한다. (위치찾기!!!!!)
+    
+	
+	- 커스텀 스피너 항목생성 및 응용
+	  Array에 담아서 자바소스안에서 스피너 목록을 지정 할 수 있다.
+	  setOnItemSelectedListener 이벤트를 사용해 선택한 값을 불러 올 수 있다.  	  
+	  
+	- 리스트 응용
+	  list Adapter.xml에 이벤트를 부여 할 수 있다.
+	  setOnClickListener     : 한번 클릭
+	  setOnLongClickListener : 길게 클릭
+	  그리고 더블클릭 이번트가 있으나 앱에선 사용자가 사용하기 불편하니 최대한 사용하지 말것	  
