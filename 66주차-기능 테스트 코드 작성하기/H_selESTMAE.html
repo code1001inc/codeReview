@@ -1,0 +1,96 @@
+<script type="text/javascript" src="../html/H_selESTMAE.js?version={{version}}"></script>
+<link rel="stylesheet" type="text/css" href="../css/styleKDBP.css"/>
+<style>
+.back1 {
+	color: black;
+	background-color: #DDEBF7;
+}
+.back2 {
+	color: black;
+	background-color: #BDD7EE;
+}
+.green {
+	color: black\9;
+	background-color: #b6ff00\9;
+}
+.yellow {
+	color: black\9;
+	background-color: yellow\9;
+}
+.red {
+	color: black\9;
+	background-color: #e83636\9;
+}
+.green:not(.jqx-grid-cell-hover):not(.jqx-grid-cell-selected), .jqx-widget .green:not(.jqx-grid-cell-hover):not(.jqx-grid-cell-selected) {
+ color: black;
+ background-color: #b6ff00;
+}
+.yellow:not(.jqx-grid-cell-hover):not(.jqx-grid-cell-selected), .jqx-widget .yellow:not(.jqx-grid-cell-hover):not(.jqx-grid-cell-selected) {
+ color: black;
+ background-color: yellow;
+}
+.red:not(.jqx-grid-cell-hover):not(.jqx-grid-cell-selected), .jqx-widget .red:not(.jqx-grid-cell-hover):not(.jqx-grid-cell-selected) {
+ color: black;
+ background-color: #e83636;
+}
+#CODMST_Modal{
+	z-index: 9999	;
+}
+</style>
+<!-- 타이틀 -->
+<div class="titleDiv">
+  <div class="divTdTitle01"> <span class="midTitle">추정매출액 조회</span> </div>
+  <div class="divTdTitle02">
+  	<input type="button" id="resetBtn" class="Btn_reset" />
+    <input type="button" id="searchBtn" class="Btn_search"  />    
+    <input type="button" id="addBtn" class="Btn_add" />
+    <input type="button" id="saveBtn" class="Btn_save" />
+    <input type="button" id="deleteBtn" class="Btn_delete" />    
+    <input type="button" id="printBtn" class="Btn_print" />
+    <input type="button" id="excelBtn" class="Btn_excel" />
+    <input type="button" id="closeBtn" class="Btn_close" />
+  </div>
+</div>
+<!-- 타이틀 -->
+<div class="divLayoutLeft" style="width:100%; height: 90vh; display: flex; flex-direction: column;">
+      <!-- 조회내역 -->
+  <div class="search1" >현황</div>
+  <div class="searchResion1" style="height: 85px;" id="div_search1">
+		<div id="div1">
+
+			
+			<div class="divTd01" style="left:0px; top: 15px; width:116px;">기수구분</div>
+			<input name="ODDGBN"  type="text" class="input7" id="ODDGBN" style="position:absolute; width: 46px; top: 15px; left: 110px;" value=""  />
+     	<input name="ODDGBNNM"  type="text" class="input7r" id="ODDGBNNM" style="position:absolute; width: 100px; left: 174px;top: 15px; margin-left: -9px;" value=""  readonly="readonly"/>
+	 		<input type="button" id="ODDGBNhelp" class="btn btn-default" value="?" style="position:absolute; height:18px; padding:1px; top: 15px; left:283px; width:20px; margin: 0 0 4px -8px;"/>
+
+
+			<div class="divTd01" style="left:350px; top: 15px; width:110px;">금액 단위</div>
+			<select name="UNTAMT" class="input7" id="UNTAMT" style="position:absolute; width: 97px; top: 15px; left: 460px;">
+				<option value="1">원</option>
+				<option value="1000">천원</option>
+				<option value="1000000">백만원</option>
+			</select>
+
+
+			<input type="button" id="EXCEUP" class="btn btn-success" value="엑셀업로드" onclick="year_select()" style="position:absolute; width: 66px; left:695px; top: 13px; height: 15px; font-size:12px; background-color:#315343; color:#FFF; cursor:pointer" />
+
+
+			<div class="divTd01" style="left:0px; top: 50px; width:116px;">지점</div>
+ 	  	<div id = "JRADIO"style="position:absolute; width: 960px; left:110px; top: 54px;"><div style="color:orange;" >※ 전체지점 조회</div></div>
+
+			<div id="test" style="position:absolute; display:flex ; left:1000px; top: 15px; width:300px;">
+				테스트<br>
+				<input type="button" class="btn-success" id="select_test" value="조회 테스트"/>
+				<input type="button" class="btn-success" id="excel_test" value="엑셀 업로드 테스트"/>
+				<input type="button" class="btn-success" id="insert_test" value="저장 테스트"/>
+				<input type="button" class="btn-success" id="delete_test" value="삭제 테스트"/>
+			</div>
+			
+		</div>
+  </div>
+	  <!-- 데이터Table -->
+  <div id='jqxWidget' style="font-size: 13px; font-family: Verdana;  flex: 1;">
+  	<div id="jqxgrid"></div>
+  </div>
+</div>
