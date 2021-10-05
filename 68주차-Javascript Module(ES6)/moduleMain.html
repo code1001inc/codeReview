@@ -1,0 +1,62 @@
+<!-- 
+[ 모듈(module) ]
+- (ECMAScript6 : 2015)에서 공개
+- 애플리케이션을 구성하는 개별적 요소
+- 재사용이 가능한 코드조각
+- Module 패턴 탄생 배경
+  : 업무의 복잡도 증가에 따라 JS 역시 같이 복잡해졌다. 이에 하나의 JS를 여러개의 JS로 분리하는 필요성이 제기
+
+* 종류
+ 1. CommonJS : JS의 서버사이드 지원을 위해 만들어진 그룹이며, 모듈화 방식을 포함함
+ 2. AMD : CommonJS 진영에서 나와 새로 생긴 그룹, 서버지향 CommonJS, 브라우저지향 AMD
+ 3. UMD : CommonJS와 AMD 등을 통합하기 위한 하나의 패턴
+ 4. ES6 : 브라우저가 지원에 따라 사용할 수 있는 방법
+
+* 기능
+ 1. 유지보수성 
+ 2. 네임스페이스화
+ 3. 재사용성
+
+* 사용방법
+ 1. HTML 내 script 호출 부분에 type="module" 지정
+ 2. js에서 export와 import로 모듈사용
+
+* 특징
+ 1. strict 모드
+ 2. module에서 선언한 변수들은 module scope로 선언되어 다른 module과 네임스페이스 사용이 자유롭다.
+ 3. 다른곳에서 여러번 호출해도 호출은 딱 1회만 실행된다.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>    
+ 
+    <input type="text" id ="inputOne" value="One">    
+
+    <script src="nonModule.js"></script> 
+    
+    <script type="module" src="module1.js"></script>     
+    <script type="module" src="module2.js"></script> 
+    <script type="module" src="module3.js"></script>     
+
+    <script type="module" src="moduleConf.js"></script>      
+    
+    <input type="text" id ="inputTwo" value="Two">    
+</body>
+</html>
+
+<!--
+---------------------------------------------------------------------------
+ [ 출처 및 참조 ]
+https://baeharam.netlify.app/posts/javascript/module
+https://snowdeer.github.io/javascript/2020/01/09/html5-how-to-use-module/
+https://velog.io/@syoung125/%EA%B0%9C%EB%85%90%EA%B3%B5%EB%B6%80-1.-Javascript
+https://velog.io/@doondoony/JavaScript-Module-System#-es6-modulesesm
+---------------------------------------------------------------------------
+-->
