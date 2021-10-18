@@ -1,0 +1,48 @@
+회의내용( 교육자 : 박준성 대리보 )
+1 ) 금주 진행 내용
+    - Lombok이란?
+	    > Java의 라이브러리로 반복되는 메소드를 Annotation을 사용해서 자동으로 작성해주는 라이브러리입니다.
+    - Annotation이란?
+	    > 어노테이션이란 메타데이터라고 볼 수 있습니다.
+          프로그램 실행 관점에서보면 프로그램이 처리할 메인 데이터가 아니라 실행과정에서 데이터를 어떻게 처리할것인지 알려주는 서브 데이터라고 볼 수 있는 것 입니다.
+          어노테이션의 크게 세 가지 용도로 사용됩니다.
+              1) 코드 문법 에러 체크 
+              2) 코드 자동 생성 정보 제공 
+              3) 런타임시 특정 기능을 실행하는 정보 제공
+    - Java에서 제공하는 Built-in Annotation
+	    > @Override
+	      메소드가 슈퍼클래스의 메소드를 오버라이드한 메소드라는 정보를 컴파일러에게 전달합니다.
+	    > @Deprecated 
+	      버전업을 하면서 해당 클래스 / 메소드 등이 지원되지 않을 수 있기 때문에 더 이상 사용하지 말라는 경고 메세지를 알려줍니다.
+	    > @SupressWarning
+	      코드의 대한 오류경고가 발생할시 컴파일러에게 명령을 내려 발생하는 경고를 제거합니다.
+	    > @FunctionalInterface
+	      컴파일러에게 다음의 인터페이스는 함수형 인터페이스라는 것을 알린다, 오바라이딩 어노테이션과 같은 실수방지 용도로 사용됩니다.
+    - 다양한 Lombok Annotation
+	    > Getter / Setter
+		> AllArgsConstructor / NoArgsConstructor / RequiredArgsConstructor
+		> EqualsAndHashCode
+		> ToString / ToString.Exclude
+		> Builder
+		> Singular
+		> Log
+		> Data / Value		
+		> Cleanup
+		> SneakyThrows
+		
+		
+2) 금주 이슈 사항
+    - 분류 별 Annotation 시연
+	- Annotation 활용방안 토론
+	
+	
+3) 참조
+    - Annotation 개념
+        https://simostory.tistory.com/32
+    - Lombok Annotation
+        https://mangkyu.tistory.com/78
+        https://korecm.github.io/Lombok%EC%9D%B4%EB%9E%80
+        https://projectlombok.org/features/all
+        https://www.daleseo.com/lombok-useful-annotations/
+    - 예제
+        https://github.com/MangKyu/lombok-Example
