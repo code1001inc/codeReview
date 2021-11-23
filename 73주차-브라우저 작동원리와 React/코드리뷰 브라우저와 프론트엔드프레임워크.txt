@@ -1,0 +1,55 @@
+<브라우저 구조>
+- User Interface( → Display Backend) → Browser Engine( → Data Persistance ) → Rendering Engine( → Networking, JavaScriptInterpreter, UI Backend )
+* User Interface(사용자인터페이스) : 브라우저 화면에서 웹사이트가 표시되는 부분을 제외한 나머지 영역( ex.주소표시줄, 이전/다음 버튼, 새로고침 버튼, 즐겨찾기 탭 등 )
+* Browser Engine(브라우저 엔진) : User Interface와 Browser Engine사이의 동작을 제어
+* Rendering Engine(렌더링 엔진) : HTML, CSS를 파싱하여 화면에 표시
+* Data Persistance(자료저장소) : 브라우저 자체 저장공간 ( ex.쿠키, IndexedDB, LocalStorage 등 )
+* Networking(네트워킹) : HTTP요청 등, 서버와 통신이 가능하게 함
+* JavaScriptInterpreter(자바스크립트 해석기) : 자바스크립트 코드를 읽고 해석
+* UI BackEnd(UI백엔드) : select box, input box, check box 등 기본적인 위젯을 그리는 인터페이스
+
+<브라우저 작동순서>
+[ Rendering Engine 동작 ]
+1. HTML 로드
+2. HTML 파싱 
+3-1. HTML 파싱 중 CSS를 만나면 HTML 렌더링 중지, CSS 로드, CSS 파싱(CSS는 렌더링 차단 리소스 : Header 태그에 정의) 
+3-2. HTML 파싱 중 JS를 만나면 HTML 파싱 중지(JS는 파서 차단 리소스 : Body 닫히기 전 정의)
+[ Rendering Engine 멈춤, 제어권한 이동 ]
+[ JavaScript Engine 동작 ]
+3-3. JS 로드 후 JS 파싱 및 실행
+[ JavaScript Engine 멈춤, 제어권한 이동 ]
+[ Rendering Engine 재시작 ]
+4. Display
+* Rendering Engine은 HTML과 CSS를 제어
+* JavaScript Engine은 JS를 제어 
+
+<Rendering Engine*의 작동방식>
+1. HTML 파싱 → DOM Tree 생성
+2. CSS 파싱 → CSSOM Tree 생성
+3. DOM Tree + CSSOM Tree = Render Tree 생성
+4. Layout : Render Tree 배치작업 ( 화면에 맞게 요소의 위치와 크기를 계산한다. 이때 상대적인 사이즈는 픽셀로 변환 )
+5. Painting & Display : Layout작업을 끝낸 Render Tree에 UI BackEnd*를 사용하여 페인팅하고 보여준다.
+
+<FrontEnd Framework 등장배경>
+- User Interaction(상호작용) → DOM 재구축(Rendering Engine 과정 재실행)
+  상호작용이 많아질수록 DOM 재구축*을 반복 해야하기 때문에 프로세스의 비효율성 발생
+- DOM관리와 상태변화를 최소화하고 개발의 편의를 제공하기 위해 Library, Framework 탄생
+* DOM 재구축 : Render Tree재생성, Reflow(Layout), Repaint(Painting) 등이 반복해서 읽어난다. (속성에 따라 Reflow만, Repaint만 발생하기도 한다.)
+
+<FrontEnd Framework를 사용한 페이스북의 예> 
+- 페이스북은 글(이미지,텍스트,아이콘,댓글 등)들이 모여있는 페이지이다.
+  해당 글에는 유저가 많은 상호작용을 할 수 있다.(좋아요, 댓글 등)
+- 유저가 상호작용을 할 때마다, 페이지를 재갱신 하거나 이미지를 다시 로드한다면? → 작업의 비효율성, 데이터소모량 증가 등 발생
+- 그래서 페이스북은 React라는 Framework를 만들어 React로 개발
+- React는 Virtual Dom을 통해 바뀐 부분만 수정
+* Virtual Dom : DOM요소 변화를 가상으로 렌더링한다.(자바스크립트 객체) 이후 실제 DOM과 비교알고리즘을 통해 비교하여 다른부분만 변경처리.
+
+<React Framework>
+- 유저상호작용시에 발생하는 프로세스의 비효율성을 고려하지 않고 프로그래밍이 가능하다.
+- 컴포넌트 기준으로 코드를 구현하기 때문에 유지보수가 용이하고 생산성이 올라간다.
+
+<참고>
+https://velog.io/@youthfulhps/React-React%EB%A5%BC-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94-%EC%9D%B4%EC%9C%A0
+https://pstudio411.tistory.com/entry/%EB%B8%8C%EB%9D%BC%EC%9A%B0%EC%A0%80%EC%9D%98-%EB%8F%99%EC%9E%91-%EC%9B%90%EB%A6%AC
+https://velog.io/@kmlee95/%EB%B8%8C%EB%9D%BC%EC%9A%B0%EC%A0%80%EC%9D%98-%EB%8F%99%EC%9E%91%EA%B3%BC%EC%A0%95%EB%B6%80%ED%84%B0-React
+https://woowa-techcamp-2020.github.io/practice-interview/Frontend/BrowserRender-%EC%A0%95%EC%A7%84%ED%98%81.html#%EB%B8%8C%EB%9D%BC%EC%9A%B0%EC%A0%80%EC%9D%98-%EA%B5%AC%EC%A1%B0
